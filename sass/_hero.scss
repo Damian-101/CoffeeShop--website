@@ -1,0 +1,46 @@
+@use "pageStyles" as *;
+.hero{
+    width: 100%;
+    height: 100vh;
+    max-width: 100%;
+    position: relative;
+    .hero__background-img{
+        width: 100%;
+        height: 100%;
+        background-repeat: no-repeat;
+        object-fit: cover;
+        position: absolute;
+        z-index: -1;
+    }
+    .hero__content-wraper{
+        height: 100%;
+        padding-bottom: 3rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: 0 auto;
+        width: 80%;
+        text-align: center;
+        color: $cWhite;
+        .hero__heading{
+            line-height: 7rem;
+            font-weight: $semiBold;
+        }
+        .hero__para{
+            padding-top:1rem;
+            font-weight: $light;
+            line-height: 3rem;
+        }
+        .hero__btn-wraper{
+            padding-top:2rem;
+            .hero__btn{
+                display: block;
+                margin: 0 auto;
+                border-radius: 1rem;
+                padding: 1.5rem 3rem;
+                font-size: 1.5rem;
+                font-weight: $semiBold;
+            }
+        }
+    }
+}

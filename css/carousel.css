@@ -1,0 +1,11 @@
+.carousel {
+  display: flex;
+  position: relative;
+  overflow: hidden;
+  height: 100%;
+}
+.carousel .carousel__item {
+  position: relative;
+  min-width: 100vw;
+  transition: all 0.8s;
+}
