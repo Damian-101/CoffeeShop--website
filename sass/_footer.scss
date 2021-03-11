@@ -1,0 +1,55 @@
+@use "pageStyles" as *;
+.footer{
+    padding: 8rem 0;
+    display: flex;
+    justify-content: center;
+    background-color: black;
+    color: $cWhite;
+    font-size: 1.3rem;
+    text-align: center;
+    :is(.footer__para,.footer__site-rights){
+        font-weight: $light;
+    }
+    .footer__container{
+        width: 100%;
+        .footer__para{
+            padding-top: 2rem;
+            width: 90%;
+            max-width: 600px;
+            margin: auto;
+        }
+        .footer__nav-wraper{
+            .footer__nav{
+                padding: 5rem 0;
+                font-weight: $medium;
+                li{
+                    padding: 0 1rem;
+                }
+            }
+        }
+        .footer-bottom{
+            width: 100%;
+            display: flex;
+            position: relative;
+            justify-content: space-between;
+            .footer__site-rights{
+                white-space: pre;
+            }
+            .footer__social-media-logos-wraper{
+                height: 100%;
+                .footer__social-media-logos{
+                    .footer__social-media-logo{
+                        font-size: 1rem;
+                        color: $cWhite;
+                        padding: 0 .5rem;
+                        a{
+                            font-size: 2rem;
+                            color: $cWhite;
+                            text-decoration: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

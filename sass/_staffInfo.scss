@@ -60,6 +60,11 @@
       .staffInfo__heading{
         padding-bottom: 1rem;
       }
+      .staffInfo__para-wraper{
+        .staffInfo__para{
+          font-weight: $light;
+        }
+      }
     }
   }
 

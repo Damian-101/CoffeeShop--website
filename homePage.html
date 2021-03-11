@@ -7,10 +7,16 @@
         <link rel="stylesheet" type="text/css" href="./css/carousel.css"/>
         <!-- main stylesheet  -->
         <link rel="stylesheet" type="text/css" href="./css/index.css"/>
+        <!-- common styles  -->
+        <link rel="stylesheet" type="text/css" href="./css/commonStyles.css"/>
+        <!-- font awesome  -->
+        <link href="/your-path-to-fontawesome/css/fontawesome.css" rel="stylesheet">
+        <link href="/your-path-to-fontawesome/css/brands.css" rel="stylesheet">
+        <link href="/your-path-to-fontawesome/css/solid.css" rel="stylesheet">
     </head>
     <body>
         <header>
-            <nav class="nav custom-container">
+            <nav class="nav custom--container">
                 <div class="nav__wraper">
                     <div class="nav__logo-wraper">
                         <img src = "./images/logo.png" class="nav__logo" alt="logo"/>
@@ -48,7 +54,7 @@
         </section>
         <!-- msg ----------  -->
         <section>
-            <div class="msg custom-container">
+            <div class="msg custom--container">
                 <div class="msg__content-wraper">
                     <h2 class="msg__heading">We Make Your Coffee With Love</h2>
                     <h4 class="msg__para">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam</h4>
@@ -63,7 +69,7 @@
                     <img src="https://dl.dropboxusercontent.com/s/bhrjfkewsb1zfef/coffee-bag-watermark.png?dl=0" alt="bg watermark" class="ourProducts__bg-watermark">
                 </div>
                 <!-- our Products headings  -->
-                <div class="ourProducts__content-wraper custom-container">
+                <div class="ourProducts__content-wraper custom--container">
                     <div class="ourProducts__top">
                         <h1 class="ourProducts__heading">Our Products</h1>
                         <h4 class="ourProducts__para">consetetur sadipscing elitr, sed diam eirmod tempor</h4>
@@ -134,16 +140,31 @@
                     <div class="staffInfo__left"></div>
                     <div class="staffInfo__right"></div>
                 </div>
-                <div class="staffInfo__content custom-container">
+                <div class="staffInfo__content custom--container">
                     <div class="staffInfo__heading">
                         <h1>Our Staff Always Happy To Help You</h1>
                     </div>
-                    <div class="staffInfo__para=wraper">
-                        <p> 
+                    <div class="staffInfo__para-wraper">
+                        <p class="staffInfo__para"> 
                             Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut 
                             labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et 
                         </p>
                     </div>
+                </div>
+            </div>
+        </section>
+        <!-- open hours  -->
+        <section>
+            <div class="openHours">
+                <div class="openHours__container custom--container">
+                    <!-- heading  -->
+                    <h1 class="openHours__heading">We Are Open Now</h1>
+                    <!-- open or closing time  -->
+                    <h3 class="openHours__time">Close At : 10.00pm</h3>
+                    <ul class="openHours__table">
+                        <li>Open At : 5.00am</li>
+                        <li>Close At : 10.00pm</li>
+                    </ul>
                 </div>
             </div>
         </section>
@@ -152,22 +173,57 @@
             <div class="imagesSection">
                 <div class="imagesSection__content">
                     <div class="imagesSection__img">
-                        <img src="https://dl.dropboxusercontent.com/s/sxr5i5vx11hbkpe/imageSection-first.png?dl=0">
+                        <!-- <img src="https://dl.dropboxusercontent.com/s/sxr5i5vx11hbkpe/imageSection-first.png?dl=0"> -->
                     </div>
                     <div class="imagesSection__img">
-                        <img src="https://dl.dropboxusercontent.com/s/ve4nt201oid64ld/imageSection-2.png?dl=0">
+                        <!-- <img src="https://dl.dropboxusercontent.com/s/ve4nt201oid64ld/imageSection-2.png?dl=0"> -->
                     </div>
                     <div class="imagesSection__img">
-                        <img src="https://dl.dropboxusercontent.com/s/670uqgj988fpkjz/imageSection-3.png?dl=0">
+                        <!-- <img src="https://dl.dropboxusercontent.com/s/670uqgj988fpkjz/imageSection-3.png?dl=0"> -->
                     </div>
                     <div class="imagesSection__img">
-                        <img src="https://dl.dropboxusercontent.com/s/84qvy6nobc5l0ve/imageSection-4.png?dl=0">
+                        <!-- <img src="https://dl.dropboxusercontent.com/s/84qvy6nobc5l0ve/imageSection-4.png?dl=0"> -->
                     </div>
                     <div class="imagesSection__img imagesSection__img">
                         <div class="imagesSection__img-link-wraper">
                             <p><a href="#" class="imagesSection__img-link">Read More ></a></p>
                         </div>
-                        <img src="https://dl.dropboxusercontent.com/s/o4h3ga3hmf8d2ox/imageSection-last.png?dl=0">
+                        <!-- <img src="https://dl.dropboxusercontent.com/s/o4h3ga3hmf8d2ox/imageSection-last.png?dl=0"> -->
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- footer ----------  -->
+        <section>
+            <div class="footer">
+                <div class="custom--container footer__container">
+                    <!-- logo  -->
+                    <div class="footer__logo-wraper">
+                        <img src="./images/logo.png" alt=""/>
+                    </div>
+                    <!-- footer paragraph  -->
+                    <div class="footer__para">
+                        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunum dolor sit amet
+                    </div>
+                    <!-- footer nav  -->
+                    <div class="footer__nav-wraper">
+                        <ul class="footer__nav d-i-block">
+                            <li class="footer__nav-element">Home</li>
+                            <li class="footer__nav-element">Menu</li>
+                            <li class="footer__nav-element">Locations</li>
+                            <li class="footer__nav-element">Contact Us</li>
+                        </ul>
+                    </div>
+                    <!-- footer bottom  -->
+                    <div class="footer-bottom">
+                        <span class="footer__site-rights">2021,All Rights Reserved</span>
+                        <div class="footer__social-media-logos-wraper">
+                            <ul class="footer__social-media-logos d-i-block">
+                                <li class="footer__social-media-logo"><a href="#" class="fab fa-facebook-f"></a></li>
+                                <li class="footer__social-media-logo"><a href="#" class="fab fa-instagram"></a></li>
+                                <li class="footer__social-media-logo"><a href="#" class="fab fa-twitter"></a></li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -177,5 +233,6 @@
         <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
         <script src="./js/slider.js"></script>
         <script src="./js/script.js"></script>
+        <script src="https://kit.fontawesome.com/a9c5ff835f.js" crossorigin="anonymous"></script>
     </body>
 </html>

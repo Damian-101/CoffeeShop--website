@@ -1,7 +1,12 @@
 @use "pageStyles" as *;
 .msg {
-    background-color: #EBEBEB;
-    padding: 8rem 0;
+    width: 100%;
+    padding: 0 .5rem;
+    display: flex;
+    align-items: center;
+    height: 45vh;
+    background-color: $greyBg;
+    max-height: 400px;
     .msg__content-wraper{
         margin: 0 auto;
         text-align: center;
@@ -12,7 +17,7 @@
             color: $themeColor
         }
         .msg__para{
-            padding: 2rem 0;
+            padding: 1rem 0;
             font-weight: $light;
         }
     }
