@@ -146,6 +146,11 @@ button {
   padding: 1.5rem 3rem;
   font-size: 1.5rem;
   font-weight: 600;
+  border: none;
+  transition: transform 0.5s;
+}
+.hero .hero__content-wraper .hero__btn-wraper .hero__btn:hover {
+  transform: translateY(-5px);
 }
 
 @media screen and (min-width: 1300px) {
@@ -177,11 +182,22 @@ button {
   }
 }
 .nav {
-  padding-top: 2rem !important;
-  padding-bottom: 2rem !important;
+  padding-top: 0.5rem !important;
+  padding-bottom: 0.5rem !important;
   width: 100%;
   position: absolute;
+  top: 0;
   z-index: 1000;
+}
+.nav::after {
+  content: "";
+  top: 0;
+  left: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #ECECEC;
+  z-index: -1;
 }
 .nav .nav__wraper {
   display: flex;
@@ -192,7 +208,7 @@ button {
 }
 .nav .nav__wraper .nav__logo-wraper .nav__logo {
   width: 20vw;
-  max-width: 100px;
+  max-width: 70px;
 }
 .nav .nav__wraper .nav__side-bar {
   font-size: 1.3rem;
@@ -200,7 +216,7 @@ button {
 }
 .nav .nav__wraper .nav__side-bar a {
   text-decoration: none;
-  color: inherit;
+  color: #000;
 }
 .nav .nav__wraper .nav__side-bar .slider__bottom {
   display: none;
@@ -208,11 +224,10 @@ button {
 .nav .nav__wraper .nav__sidebar-toggler {
   z-index: 100;
   position: absolute;
-  top: 0;
   right: 0;
 }
 .nav .nav__wraper .nav__sidebar-toggler svg {
-  color: #fff;
+  color: #000;
   width: 4rem;
   height: 100%;
 }
@@ -230,6 +245,14 @@ button {
     display: inline-block !important;
   }
 }
+.nav__fixed {
+  position: fixed !important;
+}
+.nav__fixed::after {
+  content: "";
+  opacity: 90%;
+}
+
 .msg {
   width: 100%;
   padding: 0 0.5rem;
