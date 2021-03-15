@@ -4,6 +4,21 @@
     height: 100vh;
     max-width: 100%;
     position: relative;
+    overflow: hidden;
+    &::before{
+        content: "";
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        background-image: url("https://dl.dropboxusercontent.com/s/zswr9dev35c7rov/heroBg.png?dl=0");
+        background-position: center;
+        background-size: cover;
+        overflow: hidden;
+        animation-name: zoomIn;
+        animation-duration: 15s;
+        animation-direction: normal;
+        transform: scale(1.2);
+    }
     .hero__background-img{
         width: 100%;
         height: 100%;
@@ -19,9 +34,14 @@
         flex-direction: column;
         justify-content: center;
         margin: 0 auto;
-        width: 80%;
+        width: 90%;
         text-align: center;
         color: $cWhite;
+        .hero__main-heading{
+            letter-spacing: 10px;
+            display: none;
+            font-size: 6rem;
+        }
         .hero__heading{
             line-height: 7rem;
             font-weight: $semiBold;
@@ -29,18 +49,45 @@
         .hero__para{
             padding-top:1rem;
             font-weight: $light;
-            line-height: 3rem;
         }
         .hero__btn-wraper{
             padding-top:2rem;
             .hero__btn{
                 display: block;
                 margin: 0 auto;
-                border-radius: 1rem;
+                border-radius: 1.2rem;
                 padding: 1.5rem 3rem;
                 font-size: 1.5rem;
                 font-weight: $semiBold;
             }
         }
     }
+}
+@media screen and (min-width:1300px){
+    .hero__content-wraper{
+        width: 60% !important;
+        text-align: left !important;
+        margin: 0 !important;
+        .hero__main-heading{
+            display: block !important;
+        }
+        .hero__heading{
+            font-size: 2.5rem !important;
+        }
+        .hero__btn{
+            font-size: 1rem !important;
+            margin: 0 !important;
+        }
+        .hero__para{
+            padding-top: 0 !important;
+        }
+    }
+}
+
+//animations 
+
+// bg image zoom in animation
+@keyframes zoomIn {
+    0% {transform:scale(1);}
+    100% {transform: scale(1.2);}
 }

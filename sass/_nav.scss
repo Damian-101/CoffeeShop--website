@@ -3,8 +3,12 @@
     padding-bottom: 2rem !important;
     width: 100%;
     position: absolute;
+    z-index: 1000;
     .nav__wraper{
+        display: flex;
+        align-items: center;
         position: relative;
+        justify-content: space-between;
         width: 100%;
         .nav__logo-wraper{
             .nav__logo{
@@ -13,19 +17,14 @@
             }
         }
         .nav__side-bar{
-            height: 100vh;
-            width: 70vw;
-            position: fixed;
-            top: 0;
-            right: -70vw;
-            background-color: #fff;
-            font-size: 2.8rem;
-            font-weight: 700;
-            transition: right 0.8s;
-            ul{
-                li{
-                    list-style-type: none;
-                }
+            font-size: 1.3rem;
+            font-weight: 500;
+            a{
+                text-decoration: none;
+                color: inherit;
+            }
+            .slider__bottom{
+                display: none;
             }
         }
         .nav__sidebar-toggler{
@@ -41,6 +40,16 @@
         }
     }
 }
-.nav--slider-toggle{
-    right: 0 !important;
+
+@media screen and (min-width: 1300px){
+    .nav-toggler-disable{
+        display: none;
+    }   
+    .nav__side-bar{
+        color: #fff;
+        a{
+            padding: 0 1.5rem;
+            display: inline-block !important;
+        }
+    }
 }

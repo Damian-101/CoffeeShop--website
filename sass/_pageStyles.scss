@@ -27,14 +27,22 @@ body{
     padding: 0 2rem;
     position: relative;
 }
-
+@media screen and (min-width:700px){
+    .custom--container {
+        padding: 0 3rem;
+    }
+}
+@media screen and (min-width:700px){
+    .custom--container {
+        padding: 0 5rem;
+    }
+}
 .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
     margin: 0;
 }
 p{
     margin: 0;
     font-size: 1.5rem;
-    height: 100%;
 }
 
 h1{
@@ -53,11 +61,23 @@ h4{
 
 button{
     outline: none;
+    cursor: pointer;
 }
 
 
 @media screen and (min-width:700px){
     html{
         font-size: 80%;
+    }
+}
+@media screen and (min-width:1300px){
+    html{
+        font-size: 110%;
+    }
+    p{
+        font-size: 25px !important;
+    }
+    h4{
+        font-size: 25px;
     }
 }

@@ -6,12 +6,13 @@
     align-items: center;
     height: 45vh;
     background-color: $greyBg;
-    max-height: 400px;
+    max-height: 500px;
+    position: relative;
     .msg__content-wraper{
         margin: 0 auto;
         text-align: center;
         width: 100%;
-        max-width: 600px;
+        max-width: 1300px;
         .msg__heading{
             font-weight: $semiBold;
             color: $themeColor
