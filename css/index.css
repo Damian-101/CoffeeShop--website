@@ -1,4 +1,17 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+:root {
+  --spacer--section-sm: 4rem;
+  --spacer: .5rem;
+  --spacer--lg: calc(var(--spacer) * 2);
+  --spacer--md: calc(var(--spacer) * 1);
+}
+
+@media (min-width: 1000px) {
+  :root {
+    --spacer: 1rem;
+    --spacer--section-sm: 8rem;
+  }
+}
 * {
   padding: 0;
   margin: 0;
@@ -13,6 +26,7 @@
 html {
   font-family: "poppins", sans-serif;
   font-size: 62.5%;
+  cursor: context-menu;
 }
 
 body {
@@ -24,7 +38,7 @@ body {
   position: relative;
 }
 
-@media screen and (min-width: 700px) {
+@media screen and (max-width: 700px) {
   .custom--container {
     padding: 0 3rem;
   }
@@ -34,30 +48,25 @@ body {
     padding: 0 5rem;
   }
 }
-.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
-  margin: 0;
-}
-
-p {
-  margin: 0;
-  font-size: 1.5rem;
-}
-
 h1 {
-  font-size: 4rem;
-  line-height: 5rem;
+  font-size: clamp(4rem,5vw,7rem);
+  overflow: hidden;
 }
 
 h2 {
-  font-size: 4rem;
+  font-size: clamp(4rem,5vw,7rem);
 }
 
 h3 {
-  font-size: 2.2rem;
+  font-size: clamp(2.2rem,3vw,3rem);
 }
 
 h4 {
-  font-size: 1.8rem;
+  font-size: clamp(1.8rem,2vw,2.5rem);
+}
+
+p {
+  font-size: clamp(1.5rem,2vw,2rem);
 }
 
 button {
@@ -65,24 +74,6 @@ button {
   cursor: pointer;
 }
 
-@media screen and (min-width: 700px) {
-  html {
-    font-size: 80%;
-  }
-}
-@media screen and (min-width: 1300px) {
-  html {
-    font-size: 110%;
-  }
-
-  p {
-    font-size: 25px !important;
-  }
-
-  h4 {
-    font-size: 25px;
-  }
-}
 .hero {
   width: 100%;
   height: 100vh;
@@ -100,7 +91,7 @@ button {
   background-size: cover;
   overflow: hidden;
   animation-name: zoomIn;
-  animation-duration: 15s;
+  animation-duration: 20s;
   animation-direction: normal;
   transform: scale(1.2);
 }
@@ -114,37 +105,38 @@ button {
 }
 .hero .hero__content-wraper {
   height: 100%;
-  padding-bottom: 3rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
   margin: 0 auto;
-  width: 90%;
+  width: 100%;
   text-align: center;
   color: #fff;
 }
 .hero .hero__content-wraper .hero__main-heading {
   letter-spacing: 10px;
   display: none;
-  font-size: 6rem;
+  font-size: 11rem;
+  line-height: 1;
 }
 .hero .hero__content-wraper .hero__heading {
+  margin: calc(var(--spacer--lg) / 3) 0;
+  font-size: 5rem;
   line-height: 7rem;
   font-weight: 600;
 }
 .hero .hero__content-wraper .hero__para {
-  padding-top: 1rem;
   font-weight: 300;
 }
 .hero .hero__content-wraper .hero__btn-wraper {
-  padding-top: 2rem;
+  margin: calc(var(--spacer--lg) + 2rem / 3) 0;
 }
 .hero .hero__content-wraper .hero__btn-wraper .hero__btn {
   display: block;
   margin: 0 auto;
   border-radius: 1.2rem;
   padding: 1.5rem 3rem;
-  font-size: 1.5rem;
+  font-size: clamp(1.5rem,1vw,2.8rem);
   font-weight: 600;
   border: none;
   transition: transform 0.5s;
@@ -153,23 +145,20 @@ button {
   transform: translateY(-5px);
 }
 
-@media screen and (min-width: 1300px) {
+@media screen and (min-width: 1000px) {
   .hero__content-wraper {
-    width: 60% !important;
     text-align: left !important;
     margin: 0 !important;
   }
   .hero__content-wraper .hero__main-heading {
     display: block !important;
   }
-  .hero__content-wraper .hero__heading {
-    font-size: 2.5rem !important;
-  }
-  .hero__content-wraper .hero__btn {
-    font-size: 1rem !important;
+  .hero__content-wraper .hero__btn-wraper .hero__btn {
     margin: 0 !important;
+    padding: 2rem 5rem !important;
   }
   .hero__content-wraper .hero__para {
+    max-width: 60ch !important;
     padding-top: 0 !important;
   }
 }
@@ -211,7 +200,7 @@ button {
   max-width: 70px;
 }
 .nav .nav__wraper .nav__side-bar {
-  font-size: 1.3rem;
+  font-size: 2rem;
   font-weight: 500;
 }
 .nav .nav__wraper .nav__side-bar a {
@@ -225,6 +214,14 @@ button {
   z-index: 100;
   position: absolute;
   right: 0;
+  z-index: 98;
+}
+.nav .nav__wraper .nav__sidebar-toggler::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
 }
 .nav .nav__wraper .nav__sidebar-toggler svg {
   color: #000;
@@ -255,10 +252,9 @@ button {
 
 .msg {
   width: 100%;
-  padding: 0 0.5rem;
+  padding: var(--spacer--section-sm) 0.5rem;
   display: flex;
   align-items: center;
-  height: 45vh;
   background-color: #EBEBEB;
   max-height: 500px;
   position: relative;
@@ -270,6 +266,7 @@ button {
   max-width: 1300px;
 }
 .msg .msg__content-wraper .msg__heading {
+  line-height: 1;
   font-weight: 600;
   color: #1B5D40;
 }
@@ -289,15 +286,16 @@ button {
   right: -13rem;
 }
 .ourProducts .ourProducts__content-wraper {
+  padding: 4rem 0;
   position: relative;
-  padding: 6rem 0;
 }
 .ourProducts .ourProducts__content-wraper .ourProducts__top .ourProducts__heading {
   font-weight: 600;
   text-align: center;
+  line-height: 0.8;
 }
 .ourProducts .ourProducts__content-wraper .ourProducts__top .ourProducts__para {
-  padding: 2rem 0;
+  padding: 0 0 0.5rem 0;
   text-align: center;
   font-weight: 300;
 }
@@ -356,7 +354,7 @@ button {
 
 .staffInfo {
   width: 100%;
-  height: 70vh;
+  min-height: 80vh;
   position: relative;
 }
 .staffInfo .staffInfo-sections {
@@ -366,42 +364,49 @@ button {
   display: grid;
   grid-template-columns: 1fr;
 }
-.staffInfo .staffInfo-sections div {
+.staffInfo .staffInfo-sections .staffInfo__left {
+  background: #212121;
+  position: absolute;
+  width: 100%;
   height: 100%;
 }
-.staffInfo .staffInfo-sections div:nth-child(1) {
-  display: none;
-  background: #212121;
-}
-.staffInfo .staffInfo-sections div:nth-child(2) {
+.staffInfo .staffInfo-sections .staffInfo__right {
   width: 100%;
-  background-color: red;
-  right: 0;
-  background-image: url("https://dl.dropboxusercontent.com/s/lkd77ayqchrwiui/staffBgImg.png?dl=0");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
+  height: 100%;
   z-index: 10;
+  position: relative;
+  background-color: red;
 }
-.staffInfo .staffInfo__content {
+.staffInfo .staffInfo-sections .staffInfo__right img {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  object-fit: cover;
+}
+
+.staffInfo__content {
   display: flex;
   flex-direction: column;
+  width: 100%;
   height: 100%;
   justify-content: center;
   color: #fff;
   z-index: 100;
-  width: 100%;
-  max-width: 800px;
+  max-width: 750px;
   position: relative;
 }
-.staffInfo .staffInfo__content .staffInfo__heading {
+.staffInfo__content .staffInfo__heading {
   padding-bottom: 1rem;
 }
-.staffInfo .staffInfo__content .staffInfo__para-wraper .staffInfo__para {
+.staffInfo__content .staffInfo__para-wraper .staffInfo__para {
   font-weight: 300;
 }
 
 @media screen and (min-width: 1200px) {
+  .staffInfo__left {
+    position: relative !important;
+  }
+
   .staffInfo-sections {
     grid-template-columns: 1fr 1fr !important;
   }
@@ -495,8 +500,7 @@ button {
   }
 }
 .openHours {
-  height: 45vh;
-  max-height: 400px;
+  padding: var(--spacer--section-md) 0;
   background-color: #EBEBEB;
   display: flex;
   align-items: center;
