@@ -1,4 +1,5 @@
 @use "pageStyles" as *;
+$section--padding: 4rem;
 .ourProducts{
     overflow: hidden;
     position: relative;
@@ -9,15 +10,16 @@
         right: -13rem;
     }
     .ourProducts__content-wraper{
+        padding: $section--padding 0;
         position: relative;
-        padding: 6rem 0;
         .ourProducts__top{
             .ourProducts__heading{
                 font-weight: $semiBold;
                 text-align: center;
+                line-height: .8;
             }
             .ourProducts__para{
-                padding: 2rem 0;
+                padding: 0 0 .5rem 0;
                 text-align: center;
                 font-weight: $light;
             }

@@ -28,7 +28,7 @@
             }
         }
         .nav__side-bar{
-            font-size: 1.3rem;
+            font-size: 2rem;
             font-weight: 500;
             a{
                 text-decoration: none;
@@ -42,6 +42,14 @@
             z-index: 100;
             position: absolute;
             right: 0;
+            z-index: 98;
+            &::after{
+                content: "";
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                left: 0;
+            }
             svg{
                 color: #000;
                 width: 4rem;
@@ -63,7 +71,6 @@
         }
     }
 }
-
 .nav__fixed{
     position: fixed !important;
     &::after{

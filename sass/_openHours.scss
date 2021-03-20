@@ -1,12 +1,12 @@
 @use "pageStyles" as *;
 .openHours{
-    height: 45vh;
-    max-height: 400px;
+    padding: var(--spacer--section-md) 0;
     background-color: $greyBg;
     display: flex;
     align-items: center;
     overflow: hidden;
     position: relative;
+
         &::after{
             content: "";
             width: 100%;

@@ -1,27 +1,7 @@
 @use "pageStyles" as *;
-// .staffInfo{
-//     position: relative;
-//     grid-template-columns: 1fr 1fr;
-//     width: 100%;
-//     display: flex;
-//     flex-direction: column;
-//     justify-content: center;
-//     color: $cWhite;
-//     background-image: url("/images/staffBgImg.png");
-//     background-repeat: no-repeat;
-//     background-size: cover;
-//     background-position: center;
-//     padding: 20% 0;
-//     .custom-container{
-//         width: 100%;
-//         .staffInfo__heading{
-//             padding-bottom: 2rem;
-//         }
-//     }
-// }
 .staffInfo {
     width: 100%;
-    height: 70vh;
+    min-height: 80vh;
     position: relative;
     .staffInfo-sections {
         position: absolute;
@@ -29,46 +9,52 @@
         height: 100%;
         display: grid;
         grid-template-columns: 1fr;
-      div{
-        height: 100%
-      }
-      div:nth-child(1) {
-        display: none;
+      .staffInfo__left {
         background: #212121;
-      }
-      div:nth-child(2) {
+        position: absolute;
         width: 100%;
-        background-color: red;
-        right: 0;
-        background-image: url("https://dl.dropboxusercontent.com/s/lkd77ayqchrwiui/staffBgImg.png?dl=0");
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center;
+        height: 100%;
+      }
+      .staffInfo__right {
+        width: 100%;
+        height: 100%;
         z-index: 10;
+        position: relative;
+        background-color: red;
+          img{
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            object-fit: cover;
+          }
       }
     }
-    .staffInfo__content {
-      display: flex;
-      flex-direction: column;
-      height: 100%;
-      justify-content: center;
-      color: $cWhite;
-      z-index: 100;
-      width: 100%;
-      max-width: 800px;
-      position: relative;
-      .staffInfo__heading{
-        padding-bottom: 1rem;
-      }
-      .staffInfo__para-wraper{
-        .staffInfo__para{
-          font-weight: $light;
-        }
+  }
+
+  .staffInfo__content {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    color: $cWhite;
+    z-index: 100;
+    max-width: 750px;
+    position: relative;
+    .staffInfo__heading{
+      padding-bottom: 1rem;
+    }
+    .staffInfo__para-wraper{
+      .staffInfo__para{
+        font-weight: $light;
       }
     }
   }
 
 @media screen and (min-width:1200px){
+  .staffInfo__left {
+    position: relative !important;
+  }
   .staffInfo-sections{
     grid-template-columns: 1fr 1fr !important;
     .staffInfo__left{
