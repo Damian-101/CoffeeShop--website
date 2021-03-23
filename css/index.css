@@ -525,7 +525,6 @@ button {
     height: 100vh;
     grid-template-columns: 1fr 1fr !important;
     grid-template-rows: repeat(2, 50%) !important;
-    grid-gap: 0.5%;
   }
 
   .imagesSection__img:first-child {
@@ -546,6 +545,9 @@ button {
   }
 }
 @media (pointer: fine) {
+  .imagesSection__img {
+    padding: 0.5rem;
+  }
   .imagesSection__img:hover::after {
     width: calc(110%) !important;
     height: 110% !important;
