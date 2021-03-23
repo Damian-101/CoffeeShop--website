@@ -1,5 +1,19 @@
 @use "pageStyles" as *;
-$section--padding: 4rem;
+$itemWidth: 300px;
+:root{
+    --this-section-padding: 4rem;
+}
+@media (min-width: 1000px){
+    :root{
+        --this-section-padding: 10rem
+    }
+}
+
+
+.swiper-container {
+    width: 100%;
+    height: 100%;
+  }
 .ourProducts{
     overflow: hidden;
     position: relative;
@@ -10,7 +24,8 @@ $section--padding: 4rem;
         right: -13rem;
     }
     .ourProducts__content-wraper{
-        padding: $section--padding 0;
+        width: 100%;
+        padding: var(--this-section-padding) 0;
         position: relative;
         .ourProducts__top{
             .ourProducts__heading{
@@ -19,30 +34,35 @@ $section--padding: 4rem;
                 line-height: .8;
             }
             .ourProducts__para{
-                padding: 0 0 .5rem 0;
+                padding:var(--spacer--lg) 0;
                 text-align: center;
                 font-weight: $light;
             }
         }
     }
+    
     .ourProducts__items{
+        display: flex;
+        // justify-content: center;
+        // width: 100%;
+        padding-top: clamp(1rem,2vw,5rem);
         text-align: center;
-        // display: flex;
-        .ourProducts__item-img-wraper{
-            width: 200px;
-            height: 200px;
-            .ourProducts__item-img{
-                width: 100%;
-                height: 100%;
-                background-color: #FBDDDD;
-            }
-        }
         .ourProducts__item{
-            display: grid;
-            place-items: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            .ourProducts__item-img-wraper{
+                width: 200px;
+                height: 200px;
+                .ourProducts__item-img{
+                    width: 100%;
+                    height: 100%;
+                    background-color: #FBDDDD;
+                }
+            }
             .ourProducts__item-details{
                 padding-top: 2.5rem;
-                width: 80%;
+                width: 50ch;
                 .ourProducts__item-name{
                     font-weight: $medium;
                 }
@@ -59,11 +79,12 @@ $section--padding: 4rem;
     justify-content: center;
     align-items: center;
     top: 0;
-    height: 100%;
+    height: 60%;
     position: absolute;
     width: 100%;
     padding-top: 3.5rem;
     .ourProducts__navigation-btn{
+        z-index: 1000;
         margin: 0 3rem;
         position: absolute;
         background-color: transparent;
@@ -78,4 +99,17 @@ $section--padding: 4rem;
     .ourProducts__navigation-btn:nth-child(2){
         right: 0;
     }
+}
+
+@media screen and (min-width:1000px){
+    .ourProducts__bg-watermark-wraper{
+        right: -20rem !important;
+        .ourProducts__bg-watermark{
+            width: 700px;
+        }
+    }
+}
+
+.dis-none-1000{
+    display: none !important;
 }

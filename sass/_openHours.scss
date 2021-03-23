@@ -1,11 +1,11 @@
 @use "pageStyles" as *;
 .openHours{
-    padding: var(--spacer--section-md) 0;
+    padding: var(--spacer--section-sm) 0;
     background-color: $greyBg;
     display: flex;
     align-items: center;
-    overflow: hidden;
     position: relative;
+    z-index: 100;
 
         &::after{
             content: "";
@@ -23,11 +23,12 @@
         :is(.openHours__heading,.openHours__time) {
             font-weight: $semiBold;
         }
-        .openHours__heading{
+        .openHours__heading {
+            line-height: 1;
             color: $themeColor;
         }
         .openHours__time{
-            padding: 1rem 0;
+            padding: 1rem 0 1rem 0;
         }
         .openHours__table{
             font-weight: $medium;
