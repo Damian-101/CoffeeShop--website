@@ -5,6 +5,7 @@
         display: grid;
         grid-template-columns: 1fr;
         grid-template-rows: 1fr 1fr 150px;
+        grid-gap: .5rem;
         .imagesSection__img{
             width: 100%;
             position: relative;
@@ -20,6 +21,7 @@
                 width: 100%;
                 height: 100%;
                 transition: all 1.5s;
+                overflow: hidden;
             }
             // &:hover::after{
             //     width: calc(110%);
@@ -86,10 +88,8 @@
 
 @media (pointer:fine){
     .imagesSection__img{
-        padding: .5rem;
         &:hover::after{
-            width: calc(110%) !important;
-            height: 110% !important;
+            transform: scale(1.2);
         }
     }
 }

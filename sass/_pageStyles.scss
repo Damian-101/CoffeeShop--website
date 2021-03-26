@@ -40,6 +40,7 @@ html{
 }
 body{
     max-width: 100vw;
+    overflow-x: hidden;
 }
 .custom--container {
     padding: 0 2rem;
@@ -88,5 +89,10 @@ button{
         left: 0;
         right: 0;
         top: -15px;
+        z-index: 50;
     }
+}
+
+.dis-block{
+    display: block !important;
 }

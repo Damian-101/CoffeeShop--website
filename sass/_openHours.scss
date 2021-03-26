@@ -20,6 +20,7 @@
 
         }
     .openHours__container{
+        z-index: 10;
         :is(.openHours__heading,.openHours__time) {
             font-weight: $semiBold;
         }

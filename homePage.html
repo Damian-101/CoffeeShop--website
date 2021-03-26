@@ -37,6 +37,7 @@
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
                             <path fill-rule="evenodd" d="M2.5 11.5A.5.5 0 0 1 3 11h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4A.5.5 0 0 1 3 7h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4A.5.5 0 0 1 3 3h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
                         </svg>
+                        <div class="nav__sidebar-screen-blur"></div>
                     </div>
                 </div>
             </nav>
@@ -58,10 +59,10 @@
         </section>
         <!-- msg ----------  -->
         <section>
-            <div class="msg custom--container section__paper-effect">
+            <div class="msg custom--container section__paper-effect animation show-on-scroll">
                 <div class="msg__content-wraper">
-                    <h2 class="msg__heading">We Make Your Coffee With Love</h2>
-                    <h4 class="msg__para">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos</h4>
+                    <h2 class="msg__heading animation--left">We Make Your Coffee With Love</h2>
+                    <h4 class="msg__para animation--right">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos</h4>
                 </div>
             </div>
         </section>
@@ -69,9 +70,9 @@
         <section id="itemSection">
             <div class="ourProducts">
                 <!-- bg watermark  -->
-                <div class="ourProducts__bg-watermark-wraper">
-                    <img src="https://dl.dropboxusercontent.com/s/bhrjfkewsb1zfef/coffee-bag-watermark.png?dl=0" alt="bg watermark" class="ourProducts__bg-watermark">
-                </div>
+                <!-- <div class="ourProducts__bg-watermark-wraper">
+                    <img src="" alt="bg watermark" class="ourProducts__bg-watermark">
+                </div> -->
                 <!-- our Products headings  -->
                 <div class="ourProducts__content-wraper custom--container">
                     <div class="ourProducts__top">
@@ -170,13 +171,13 @@
         </section>
         <!-- open hours  -->
         <section>
-            <div class="openHours section__paper-effect">
+            <div class="openHours section__paper-effect animation show-on-scroll">
                 <div class="openHours__container custom--container">
                     <!-- heading  -->
-                    <h1 class="openHours__heading">We Are Open Now</h1>
+                    <h1 class="openHours__heading animation--left">We Are Open Now</h1>
                     <!-- open or closing time  -->
-                    <h3 class="openHours__time">Close At : 10.00pm</h3>
-                    <ul class="openHours__table">
+                    <h3 class="openHours__time animation--left">Close At : 10.00pm</h3>
+                    <ul class="openHours__table animation--right">
                         <li><p>Open At : 5.00am</p></li>
                         <li><p>Close At : 10.00pm</p></li>
                     </ul>
@@ -236,9 +237,9 @@
                         <span class="footer__site-rights footer__item"><p>2021,All Rights Reserved</p></span>
                         <div class="footer__social-media-logos-wraper footer__item">
                             <ul class="footer__social-media-logos d-i-block">
-                                <li class="footer__social-media-logo"><a href="#" class="fab fa-facebook-f"></a></li>
-                                <li class="footer__social-media-logo"><a href="#" class="fab fa-instagram"></a></li>
-                                <li class="footer__social-media-logo"><a href="#" class="fab fa-twitter"></a></li>
+                                <li class="footer__social-media-logo"><a href="https://www.facebook.com" class="fab fa-facebook-f" target="_blank"></a></li>
+                                <li class="footer__social-media-logo"><a href="https://www.instagram.com" class="fab fa-instagram" target="_blank"></a></li>
+                                <li class="footer__social-media-logo"><a href="https://twitter.com" class="fab fa-twitter" target="_blank"></a></li>
                             </ul>
                         </div>
                     </div>
@@ -256,5 +257,7 @@
         <script src="./js/slider.js"></script>
         <!-- fontawesome  -->
         <script src="https://kit.fontawesome.com/a9c5ff835f.js" crossorigin="anonymous"></script>
+        <!-- animation js  -->
+        <script src="./js/animation.js"></script>
     </body>
 </html>

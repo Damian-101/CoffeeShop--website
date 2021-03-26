@@ -1,7 +1,9 @@
 const slider = document.getElementsByClassName("nav__side-bar")[0]
 const width = innerWidth
-const toggleBtn = $(".nav__sidebar-toggler")[0];
+const sliderBlur = document.getElementsByClassName("nav__sidebar-screen-blur")[0]
+const toggleBtn = document.getElementsByClassName("nav__sidebar-toggler")[0];
     toggleBtn.addEventListener("click", (e) => {
+        sliderBlur.classList.toggle("dis-block")
         slider.classList.toggle("nav--slider-toggle")
         var x = true
         console.log(x)

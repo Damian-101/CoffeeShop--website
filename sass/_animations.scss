@@ -1,0 +1,31 @@
+// corner to middle 
+//  Left Group ---> | Left Group  |<---Right Group
+//                  |     &       |
+//                  | Right Group |
+
+.animation.is-visible{
+    width: 100%;
+    transition: all 0.5s;
+    .animation--left{
+        transform: translateX(0);
+        animation: left-center 1s;
+        opacity: 100;
+    }
+    .animation--right{
+        transform: translateX(0);
+        animation: right-center 1s;
+        opacity: 100%;
+    }
+}
+
+@keyframes left-center {
+    0% {transform:translateX(-100%);opacity: 0;}
+    90% {opacity: 100%;}
+    100% {transform:translateX(0%);}
+}
+@keyframes right-center {
+    0% {transform:translateX(100%);opacity: 0;}
+    90% {opacity: 100%;}
+    100% {transform:translateX(0%);}
+}
+
