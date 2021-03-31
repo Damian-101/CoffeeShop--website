@@ -15,6 +15,7 @@ scrollFixed()
               width: 1000,
               slidesPerView: 1,
               spaceBetween: 10,
+              allowTouchMove: false,
               breakpoints: {
                      // when window width is >= 320px
                      320: {
