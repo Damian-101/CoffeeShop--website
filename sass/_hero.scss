@@ -36,6 +36,7 @@
         width: 100%;
         text-align: center;
         color: $cWhite;
+        position: relative;
         .hero__main-heading{
             letter-spacing: 10px;
             display: none;
@@ -56,15 +57,6 @@
             .hero__btn{
                 display: block;
                 margin: 0 auto;
-                border-radius: 1.2rem;
-                padding: 1.5rem 3rem;
-                font-size:clamp(1.5rem,1vw,2.8rem);
-                font-weight: $semiBold;
-                border: none;
-                transition: transform .5s;
-                &:hover{
-                    transform: translateY(-5px);
-                }
             }
         }
     }
@@ -72,15 +64,9 @@
 @media screen and (min-width:1000px){
     .hero__content-wraper{
         text-align: left !important;
-        margin: 0 !important;
+        padding: 0 3rem !important;
         .hero__main-heading{
             display: block !important;
-        }
-        .hero__btn-wraper{
-            .hero__btn{
-                margin: 0 !important;
-                padding: 2rem 5rem !important;
-            }
         }
         .hero__para{
             max-width: 60ch !important;

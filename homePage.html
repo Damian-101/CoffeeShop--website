@@ -4,8 +4,8 @@
         <meta name = "viewport" content="width=device-width,initial-scale=1.0">
         <title>Coffee House/HomePage</title>
         <!-- swiper carousel  -->
-        <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
-        <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+        <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" />
+        <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
         <!-- normalize styles  -->
         <link rel="stylesheet" href="./css/slider.css"/>
         <!-- carousel stylesheet -->
@@ -21,7 +21,7 @@
     </head>
     <body>
         <header>
-            <nav class="nav custom--container">
+            <nav class="nav">
                 <div class="nav__wraper">
                     <div class="nav__logo-wraper">
                         <img src = "./images/logo.png" class="nav__logo" alt="logo"/>
@@ -52,159 +52,101 @@
                     <h2 class="hero__heading">Welcome To Coffee House</h2>
                     <h4 class="hero__para">Lorem ipsum dolor sit amet, consetetur  elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At</h4>
                     <div class="hero__btn-wraper">
-                        <button class="hero__btn">Locations</button>
+                        <button class="hero__btn btn"><span class="btn-text">Locations</span></button>
                     </div>
                 </div>            
             </div>
         </section>
         <!-- msg ----------  -->
         <section>
-            <div class="msg custom--container section__paper-effect animation show-on-scroll">
-                <div class="msg__content-wraper">
+            <div class="msg section__paper-effect animation show-on-scroll">
+                <div class="msg__content-wraper custom--container">
                     <h2 class="msg__heading animation--left">We Make Your Coffee With Love</h2>
                     <h4 class="msg__para animation--right">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos</h4>
                 </div>
             </div>
         </section>
         <!-- our products ----------------  -->
-        <section id="itemSection">
+        <section>
             <div class="ourProducts">
-                <!-- bg watermark  -->
-                <!-- <div class="ourProducts__bg-watermark-wraper">
-                    <img src="" alt="bg watermark" class="ourProducts__bg-watermark">
-                </div> -->
-                <!-- our Products headings  -->
-                <div class="ourProducts__content-wraper custom--container">
-                    <div class="ourProducts__top">
-                        <h2 class="ourProducts__heading">Our Products</h2>
-                        <h4 class="ourProducts__para">consetetur sadipscing elitr, sed diam eirmod tempor</h4>
-                    </div>
-                    <div class="swiper-container ourProducts__items-wraper">
-                        <!-- items wraper  -->
-                            <div class="swiper-wrapper ourProducts__items" id="itemWraper">
-                                <div class="swiper-slide ourProducts__item">
-                                        <div class="ourProducts__item-img-wraper">
-                                            <div class="ourProducts__item-img"></div>
-                                        </div>
-                                        <div class="ourProducts__item-details">
-                                            <h3 class="ourProducts__item-name">Types Of Coffee</h3>
-                                            <p class="ourProducts__item-description">sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam</p>
-                                        </div>
-                                </div>
-                                <!-- ///// -->
-                                <div class="swiper-slide ourProducts__item">
-                                    <div class="ourProducts__item-img-wraper">
-                                        <div class="ourProducts__item-img"></div>
-                                    </div>
-                                    <div class="ourProducts__item-details">
-                                        <h3 class="ourProducts__item-name">Pastry and Crossents</h3>
-                                        <p class="ourProducts__item-description">sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam</p>
-                                    </div>
-                                </div>
-                                <!-- ///// -->
-                                <div class="swiper-slide ourProducts__item">
-                                    <div class="ourProducts__item-img-wraper">
-                                        <div class="ourProducts__item-img"></div>
-                                    </div>
-                                    <div class="ourProducts__item-details">
-                                        <h3 class="ourProducts__item-name">Bean Varieties</h3>
-                                        <p class="ourProducts__item-description">sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam</p>
-                                    </div>
-                                </div>
-                                <!-- ///// -->
-                                <div class="swiper-slide ourProducts__item">
-                                    <div class="ourProducts__item-img-wraper">
-                                        <div class="ourProducts__item-img"></div>
-                                    </div>
-                                    <div class="ourProducts__item-details">
-                                        <h3 class="ourProducts__item-name">Bevarages</h3>
-                                        <p class="ourProducts__item-description">sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam</p>
-                                    </div>
-                                </div>
-                            </div>
-                    <!-- carousel navigation btns -->
-                    <div class="ourProducts__navigation" id="carouselNavigation">
-                        <!-- <div class="swiper-button-prev"></div>
-                        <div class="swiper-button-next"></div>
-                        <div class="swiper-scrollbar"></div> -->
-                        <button class="ourProducts__navigation-btn" id="prev-btn">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-arrow-left" viewBox="0 0 16 16">
-                                <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z"/>
-                            </svg>
-                        </button>
-                        <button class="ourProducts__navigation-btn" id="next-btn">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
-                                <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
-                            </svg>
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- staff section ---------- -->
-        <section>
-            <div class="staffInfo">
-                <div class="staffInfo-sections">
-                    <div class="staffInfo__left">
-                        <div class="staffInfo__content custom--container">
-                            <div class="staffInfo__heading">
-                                <h2>Our Staff Always Happy To Help You</h2>
-                            </div>
-                            <div class="staffInfo__para-wraper">
-                                <p class="staffInfo__para"> 
-                                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, 
-                                    sed diam nonumy eirmod tempor invidunt ut labore et dolore 
-                                    magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo
-                                    consetetur sadipscing erat, nonumy eirmod tempor invidunt ut labore et dolore
-                                </p>
-                            </div>
-                        </div>   
-                    </div>
-                    <div class="staffInfo__right">
-                        <picture>
-                            <source media="(min-width: 1200px)" srcset="./images/staffBgImgDesktop.png"/>
-                            <img src="https://dl.dropboxusercontent.com/s/lkd77ayqchrwiui/staffBgImg.png?dl=0"/>
-                        </picture>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- open hours  -->
-        <section>
-            <div class="openHours section__paper-effect animation show-on-scroll">
-                <div class="openHours__container custom--container">
-                    <!-- heading  -->
-                    <h1 class="openHours__heading animation--left">We Are Open Now</h1>
-                    <!-- open or closing time  -->
-                    <h3 class="openHours__time animation--left">Close At : 10.00pm</h3>
-                    <ul class="openHours__table animation--right">
-                        <li><p>Open At : 5.00am</p></li>
-                        <li><p>Close At : 10.00pm</p></li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-        <!-- images section ------------ -->
-        <section>
-            <div class="imagesSection">
-                <div class="imagesSection__content">
-                    <div class="imagesSection__img">
-                        <!-- <img src="https://dl.dropboxusercontent.com/s/sxr5i5vx11hbkpe/imageSection-first.png?dl=0"> -->
-                    </div>
-                    <div class="imagesSection__img">
-                        <!-- <img src="https://dl.dropboxusercontent.com/s/ve4nt201oid64ld/imageSection-2.png?dl=0"> -->
-                    </div>
-                    <div class="imagesSection__img">
-                        <!-- <img src="https://dl.dropboxusercontent.com/s/670uqgj988fpkjz/imageSection-3.png?dl=0"> -->
-                    </div>
-                    <div class="imagesSection__img">
-                        <!-- <img src="https://dl.dropboxusercontent.com/s/84qvy6nobc5l0ve/imageSection-4.png?dl=0"> -->
-                    </div>
-                    <div class="imagesSection__img imagesSection__img">
-                        <div class="imagesSection__img-link-wraper">
-                            <p><a href="#" class="imagesSection__img-link">Read More ></a></p>
+                <div class="ourProducts__left-wraper">
+                    <div class="ourProducts__left">
+                        <div class="ourProducts__item-ref-img">
+                            <img src="images/ourProducts-pastries-bg.png" alt="product background image"/>
                         </div>
-                        <!-- <img src="https://dl.dropboxusercontent.com/s/o4h3ga3hmf8d2ox/imageSection-last.png?dl=0"> -->
+                        <div class="ourProducts__item-ref-img"> 
+                            <img src ="images/ourProducts-coffee-bg.png" alt = ""/>
+                        </div>
+                        <div class="ourProducts__item-ref-img"> 
+                            <img src ="images/ourProducts-bevarage-bg.png" alt = ""/>
+                        </div>
+                        <div class="ourProducts__item-ref-img"> 
+                            <img src ="images/ourProducts-bevarage-bg.png" alt = ""/>
+                        </div>
+                    </div>
+                </div>
+                <div class="ourProducts__wraper custom--container">
+                    <!-- top  -->
+                    <div class="ourProducts__top">
+                        <div class="ourProducts__heading">
+                            <h1 class="ourProducts__heading-top">Our</h1>
+                            <h1 class="ourProducts__heading-bottom">Products</h1>
+                        </div>
+                        <div class="ourProducts__para-wraper">
+                            <h4 class="ourProducts__para">consetetur sadipscing elitr, sed diam eirmod tempor  consetetur sadipscing elitr, sed diam eirmod tempor</h4>
+                        </div>
+                    </div>
+                    <!-- bottom  -->
+                    <div class="ourProducts__bottom">
+                        <div class="ourProducts__carousel">
+                            <div class="swiper-container">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide ourProducts__item">
+                                        <div class="ourProducts__item-name">PASTRIES</div>
+                                        <img src="images/ourProducts-pastries.png"/>
+                                    </div>
+                                    <div class="swiper-slide ourProducts__item">
+                                        <div class="ourProducts__item-name">COFFEE</div>
+                                        <img src="images/ourProducts-coffee.png"/>
+                                    </div>
+                                    <div class="swiper-slide ourProducts__item">
+                                        <div class="ourProducts__item-name">BEVARAGES</div>
+                                        <img src="images/ourProducts-bevarages.png"/>
+                                    </div>
+                                    <div class="swiper-slide ourProducts__item">
+                                        <div class="ourProducts__item-name">COFFEE BEANS</div>
+                                        <img src="images/ourProducts-bevarages.png"/>
+                                    </div>
+                                </div>
+                                <div class="ourProducts__navigation-svg">
+                                    <div id="prev-btn"><img src="./images/toggle-left.svg" alt="left btn svg"/></div>
+                                    <div id="next-btn"><img src="./images/toggle-right.svg" alt="right btn svg"/></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- about staff --------- -->
+        <section>
+            <div class="aboutStaff">
+                <div class="ourProducts__watermark">OUR HEROES</div>
+                <div class="aboutStaff__content-wraper custom--container">
+                    <div class="aboutStaff__heading-wraper">
+                        <h1 class="aboutStaff__heading">Our Staff Always Happy To<span class="aboutStaff__heading-highlighted"> Help You</span></h1>
+                    </div>
+                    <div class="aboutStaff__img">
+                        <img src="./images/aboutStaff-img.png"/>
+                    </div>
+                    <div class="aboutStaff__testimonial-action-wraper">
+                        <div class="aboutStaff__testimonial-wraper">
+                            <h4 class="aboutStaff__testimonial">"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor"</h4>
+                            <div class="aboutStaff__testimonial-commenter"><p class="aboutStaff__testimonial-commenter-name"><span>- </span>Staff Members<span> -</span></p></div>
+                        </div>
+                        <div class="aboutStaff__action">
+                            <button class="btn"><span class="btn-text">Gallery</span></button>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -219,7 +161,8 @@
                     </div>
                     <!-- footer paragraph  -->
                     <div class="footer__para">
-                        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, 
+                        <p>
+                            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, 
                             sed diam voluptua sanctus est Lorem ipsum dolor sit amet
                         </p>
                     </div>

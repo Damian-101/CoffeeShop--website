@@ -1,78 +1,112 @@
 @use "pageStyles" as *;
-.staffInfo {
-    width: 100%;
-    min-height: 80vh;
+@import url('https://fonts.googleapis.com/css2?family=Yellowtail&display=swap');
+.aboutStaff{
+    background-color: #E4E0DD;
     position: relative;
-    .staffInfo-sections {
+    overflow: hidden;
+    &::before{
+        content: "";
+        background-color: transparent;
+        background-image: url("../images/staff-section-bg-pattern.png");
+        width: 100%;
+        height: 100%;
         position: absolute;
+        opacity: 20%;
+        z-index: 1;
+    }
+    .ourProducts__watermark{
+        display: none;
         width: 100%;
-        height: 100%;
-        display: grid;
-        grid-template-columns: 1fr;
-      .staffInfo__left {
-        background: #212121;
+        font-weight: $bold;
+        font-size: 12vw;
         position: absolute;
-        width: 100%;
+        letter-spacing: 30px;
+        top: 0;
+        margin: 0 auto;
+        text-align: center;
+        opacity: 10%;
+        line-height: 1 ;
+        padding-top: 2rem;
+    }
+    .aboutStaff__content-wraper{
+        margin-bottom: calc(var(--spacer--section-sm)*1.5);
+        margin-top: var(--spacer--section-sm);
         height: 100%;
-        &::before{
-          content: "";
-          width: 100%;
-          height: 100%;
-          position: absolute;
-          background-image: url(../svg/bg-pattern.svg);
-          opacity: 10%;
-        }
-      }
-      .staffInfo__right {
-        width: 100%;
-        height: 100%;
-        z-index: 10;
         position: relative;
-        background-color: red;
-          img{
-            height: 100%;
-            width: 100%;
+        z-index: 2;
+        .aboutStaff__heading-wraper{
+            position: relative;
+            z-index: 10;
+            .aboutStaff__heading{
+                font-weight: $bold;
+                min-width: 60%;
+                max-width:500px;
+            }
+            .aboutStaff__heading-highlighted{
+                color: $themeColor;
+            }
+        }
+        .aboutStaff__testimonial-action-wraper{
+            position: relative;
+            z-index: 10;
+            max-width: 500px;
+            padding-top: 1rem;
+            .aboutStaff__testimonial-wraper{
+                .aboutStaff__testimonial{
+                    font-weight: $light;
+                    font-style: italic;
+                }
+                .aboutStaff__testimonial-commenter{
+                    padding:1rem 0;
+                    .aboutStaff__testimonial-commenter-name{
+                        font-family: 'Yellowtail', cursive;
+                        text-align: end;
+                    }
+                }
+            }
+        }
+        .aboutStaff__img{
             position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            object-fit: cover;
-            z-index: -1;
-            // transform: translateZ(-1px) scale(1.7);
-          }
-      }
+            top: -70px;
+            right: -240px;
+            opacity: 30%;
+        }
     }
-  }
-
-  .staffInfo__content {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    height: 100%;
-    justify-content: center;
-    color: $cWhite;
-    z-index: 100;
-    max-width: 750px;
-    position: relative;
-    .staffInfo__heading{
-      padding-bottom: 1rem;
-    }
-    .staffInfo__para-wraper{
-      .staffInfo__para{
-        font-weight: $light;
-      }
-    }
-  }
-
-@media screen and (min-width:1200px){
-  .staffInfo__left {
-    position: relative !important;
-  }
-  .staffInfo-sections{
-    grid-template-columns: 1fr 1fr !important;
-    .staffInfo__left{
-      display: block !important;
-    }
-  }
 }
+
+@media screen and (min-width: 770px){
+    .aboutStaff__img{
+        opacity: 100% !important;
+    }
+}
+
+@media screen and (min-width: 1445px){
+    .aboutStaff{
+        .ourProducts__watermark{
+            white-space: pre;
+            display: block !important;
+        }
+        .aboutStaff__content-wraper{
+            height: 60vh;
+            position: relative;
+            .aboutStaff__heading{
+                min-width: 600px !important;
+            }
+            .aboutStaff__img{
+                padding-top: 20rem;
+                width: 100%;
+                right: auto !important;
+                display: flex;
+                img{
+                    margin: 0 auto;
+                }
+            }
+            .aboutStaff__testimonial-action-wraper{
+                position: absolute !important;
+                right: 0;
+                bottom: 0;
+            }
+        }
+    }
+}
+

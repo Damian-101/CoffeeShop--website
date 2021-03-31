@@ -1,128 +1,113 @@
 @use "pageStyles" as *;
-$itemWidth: 300px;
-:root{
-    --this-section-padding: 4rem;
-}
-@media (min-width: 1000px){
-    :root{
-        --this-section-padding: 10rem
-    }
-}
-
-
-.swiper-container {
-    width: 100%;
-    height: 100%;
-  }
+$white-bg: #fff;
+$white-text: #fff;
 .ourProducts{
-    overflow: hidden;
+    padding-top: 10rem;
+    padding-bottom: 10rem;
+    height: 100%;
     position: relative;
+    color: $white-text;
+    background-color: #000;
+    overflow: hidden;
     &::before{
         content: "";
-        display: block;
-        position: absolute;
         width: 100%;
         height: 100%;
-        background-image:url("https://dl.dropboxusercontent.com/s/bhrjfkewsb1zfef/coffee-bag-watermark.png?dl=0");
-        background-repeat: no-repeat;
-        background-position: 1500px 400px;
-        background-size: 600px;
-        opacity: 10%;
-        background-attachment: fixed;
-    }
-    // .ourProducts__bg-watermark-wraper{
-    //     position: absolute;
-    //     opacity: 8%;
-    //     bottom: -10rem;
-    //     right: -13rem;
-    // }
-    .ourProducts__content-wraper{
-        width: 100%;
-        padding: var(--this-section-padding) 0;
-        position: relative;
-        .ourProducts__top{
-            .ourProducts__heading{
-                font-weight: $semiBold;
-                text-align: center;
-                line-height: .8;
-            }
-            .ourProducts__para{
-                padding:var(--spacer--lg) 0;
-                text-align: center;
-                font-weight: $light;
-            }
-        }
-    }
-    
-    .ourProducts__items{
-        display: flex;
-        // justify-content: center;
-        // width: 100%;
-        padding-top: clamp(1rem,2vw,5rem);
-        text-align: center;
-        .ourProducts__item{
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            .ourProducts__item-img-wraper{
-                width: 200px;
-                height: 200px;
-                .ourProducts__item-img{
-                    width: 100%;
-                    height: 100%;
-                    background-color: #FBDDDD;
-                }
-            }
-            .ourProducts__item-details{
-                padding-top: 2.5rem;
-                width: 50ch;
-                .ourProducts__item-name{
-                    font-weight: $medium;
-                }
-                .ourProducts__item-description{
-                    font-weight: $light;
-                }
-            }
-        }
-    }
-}
-
-.ourProducts__navigation{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    top: 0;
-    height: 60%;
-    position: absolute;
-    width: 100%;
-    padding-top: 3.5rem;
-    .ourProducts__navigation-btn{
-        z-index: 1000;
-        margin: 0 3rem;
         position: absolute;
-        background-color: transparent;
-        border: none;
-        svg{
-            width: 3rem;
-        }
-    }
-    .ourProducts__navigation-btn:nth-child(1){
+        margin: 0;
         left: 0;
+        top: 0;
+        background-image: url("../images/ourProducts-bg-texture.png");
+        opacity: 80%;
     }
-    .ourProducts__navigation-btn:nth-child(2){
+    .ourProducts__left{
+        width: 40vw;
+        height: 100%;
+        position: absolute;
         right: 0;
+        top: 0;
+        object-fit: cover;
+        z-index: 50;
+        background-color: red;
+        .ourProducts__item-ref-img{
+            z-index: 1;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+        }
     }
-}
+    .ourProducts__top{
+        position: relative;
+        z-index: 50;
+            .ourProducts__heading{
+                line-height: 0.8;
+                font-weight: $bold;
+                .ourProducts__heading-top{
+                    display: flex;
+                    align-items: center;
+                    position: relative;
+                    &::after{
+                        content: "";
+                        background-color: $white-bg;
+                        width: 100px;
+                        height: 8px;
+                        position: absolute;
+                        margin-left: 150px;
+                    }
+                }
+            }
+            .ourProducts__para-wraper{
+                padding: 2rem 0;
+                .ourProducts__para{
+                    font-weight: $light;
+                    width: 60ch;
+                }
+            }
+    }
+    .ourProducts__bottom{
+        z-index: 50;
+        position: relative;
+        .swiper-wrapper{
+            display: flex;
+            align-items: center;
+        }
+        .ourProducts__carousel{
+            display: flex;
+            align-items: center;
+            height: 100%;
+            .ourProducts__item {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 500px;
+                .ourProducts__item-name{
+                    position: absolute;
+                    font-size: 4rem;
+                    font-weight: $bold;
+                }
+                img{
+                    width: 100%;
+                    object-fit: cover;
+                }
+            }
+        }
+        .ourProducts__navigation-svg{
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: absolute;
+            top: 0;
+            z-index: 100;
 
-@media screen and (min-width:1000px){
-    .ourProducts__bg-watermark-wraper{
-        right: -20rem !important;
-        .ourProducts__bg-watermark{
-            width: 700px;
         }
     }
 }
 
-.dis-none-1000{
-    display: none !important;
+.item--active-size{
+        width: 600px !important;
+}
+.ourProducts--img-ref-active{
+        z-index: 10 !important;
 }
