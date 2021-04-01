@@ -12,7 +12,7 @@ function scrollFixed () {
 scrollFixed()
 
        const swiper = new Swiper('.swiper-container', {
-              width: 1000,
+              width: 500,
               slidesPerView: 1,
               spaceBetween: 10,
               allowTouchMove: false,
@@ -29,7 +29,7 @@ scrollFixed()
                      },
                      // when window width is >= 640px
                      640: {
-                       slidesPerView: 2,
+                       slidesPerView: 1,
                        spaceBetween: 80
                      }
                    },

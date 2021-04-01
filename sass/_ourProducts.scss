@@ -80,14 +80,18 @@ $white-text: #fff;
                 align-items: center;
                 justify-content: center;
                 width: 500px;
+                z-index: 100;
+                transition: transform .5s;
+                cursor: pointer;
+                img{
+                    width: 100%;
+                    object-fit: cover;
+                }
                 .ourProducts__item-name{
                     position: absolute;
                     font-size: 4rem;
                     font-weight: $bold;
-                }
-                img{
-                    width: 100%;
-                    object-fit: cover;
+                    z-index: 100;
                 }
             }
         }
@@ -99,9 +103,19 @@ $white-text: #fff;
             justify-content: space-between;
             position: absolute;
             top: 0;
-            z-index: 100;
+            div{
+                position: relative;
+                z-index: 100;
+            }
 
         }
+    }
+}
+
+.ourProducts__item:hover{
+    transform: scale(.9);
+    .ourProducts__item-name{
+        color: #51A580;
     }
 }
 

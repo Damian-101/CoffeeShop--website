@@ -88,6 +88,16 @@ button {
   top: -15px;
   z-index: 50;
 }
+.section__paper-effect::after {
+  content: "";
+  width: 100%;
+  height: 100px;
+  background-image: url("../svg/paperEffect.svg");
+  position: absolute;
+  bottom: -10px;
+  z-index: 100;
+  transform: rotate(180deg) scaleX(-1);
+}
 
 .dis-block {
   display: block !important;
@@ -305,7 +315,7 @@ button {
 
 .msg {
   width: 100%;
-  padding: var(--spacer--section-sm) 0.5rem;
+  padding: var(--spacer--section-sm) 0;
   display: flex;
   align-items: center;
   background-color: #EBEBEB;
@@ -411,15 +421,19 @@ button {
   align-items: center;
   justify-content: center;
   width: 500px;
+  z-index: 100;
+  transition: transform 0.5s;
+  cursor: pointer;
+}
+.ourProducts .ourProducts__bottom .ourProducts__carousel .ourProducts__item img {
+  width: 100%;
+  object-fit: cover;
 }
 .ourProducts .ourProducts__bottom .ourProducts__carousel .ourProducts__item .ourProducts__item-name {
   position: absolute;
   font-size: 4rem;
   font-weight: 700;
-}
-.ourProducts .ourProducts__bottom .ourProducts__carousel .ourProducts__item img {
-  width: 100%;
-  object-fit: cover;
+  z-index: 100;
 }
 .ourProducts .ourProducts__bottom .ourProducts__navigation-svg {
   width: 100%;
@@ -429,7 +443,17 @@ button {
   justify-content: space-between;
   position: absolute;
   top: 0;
+}
+.ourProducts .ourProducts__bottom .ourProducts__navigation-svg div {
+  position: relative;
   z-index: 100;
+}
+
+.ourProducts__item:hover {
+  transform: scale(0.9);
+}
+.ourProducts__item:hover .ourProducts__item-name {
+  color: #51A580;
 }
 
 .item--active-size {
