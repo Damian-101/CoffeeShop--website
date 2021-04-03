@@ -3,17 +3,24 @@
     width: 100%;
     position: relative;
     background: #E1D9D1;
-    // overflow: hidden;
+    &::before{
+        content: "";
+        width: 100%;
+        height: 100%;
+        position: absolute;
+    }
+    overflow: hidden;
     .ourHistory__bg-texture{
         width: 100%;
         height: 110%;
         position: absolute;
-        opacity: 10%;
+        // opacity: 10%;
         mix-blend-mode: darken;
-        object-fit: cover;
         img{
             width: 100%;
             height: 100%;
+            clip-path: url(#mask);
+            object-fit: cover;
         }
     }
     .ourHistory__bg-cards{
@@ -32,7 +39,6 @@
             justify-content: center;
             align-items: center;
                 img{
-                    background: red;
                     width: calc(100% - 5rem);
                     height: 30vh;
                     margin-bottom: 10rem;
@@ -91,29 +97,36 @@
     }
 }
 
-
-.section__paper-effect2{
-    &::before{
-        content: "";
-        width: 100%;
-        height: 100px;
-        background-image: url("../svg/paperEffect2.svg");
-        background-repeat: no-repeat;
-        background-size: cover;
-        position: absolute;
-        left: 0;
-        right: 0;
-        top: -15px;
-        z-index: 50;
-    }
-    &::after{
-        content: "";
-        width: 100%;
-        height: 100px;
-        background-image: url("../svg/paperEffect2.svg");
-        position: absolute;
-        bottom: -10px;
-        z-index: 100;
-        transform: rotate(180deg) scaleX(-1);
-    }
+.paperMask{
+    width: 100%;
+    position: absolute;
+    width: 100%;
+    height: 100px;
+    top: -30px;
 }
+
+// .section__paper-effect2{
+//     &::before{
+//         content: "";
+//         width: 100%;
+//         height: 100px;
+//         background-image: url("../svg/paperEffect2.svg");
+//         background-repeat: no-repeat;
+//         background-size: cover;
+//         position: absolute;
+//         left: 0;
+//         right: 0;
+//         top: -15px;
+//         z-index: 150;
+//     }
+//     &::after{
+//         content: "";
+//         width: 100%;
+//         height: 100px;
+//         background-image: url("../svg/paperEffect2.svg");
+//         position: absolute;
+//         bottom: -10px;
+//         z-index: 100;
+//         transform: rotate(180deg) scaleX(-1);
+//     }
+// }

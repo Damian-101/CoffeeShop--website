@@ -94,7 +94,7 @@ $white-text: #fff;
                 }
                 .ourProducts__item-name{
                     position: absolute;
-                    font-size: 4rem;
+                    font-size: clamp(4vw, 4vw, 4vw);
                     font-weight: $bold;
                     z-index: 100;
                 }

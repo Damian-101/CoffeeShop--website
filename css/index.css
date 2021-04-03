@@ -79,7 +79,7 @@ button {
   content: "";
   width: 100%;
   height: 100px;
-  background-image: url("../svg/paperEffect copy.svg");
+  background-image: url("../svg/paperEffect.svg");
   background-repeat: no-repeat;
   background-size: cover;
   position: absolute;
@@ -329,7 +329,7 @@ button {
   position: relative;
 }
 .msg .msg__content-wraper {
-  z-index: 100;
+  z-index: 200;
   margin: 0 auto;
   text-align: center;
   width: 100%;
@@ -441,7 +441,7 @@ button {
 }
 .ourProducts .ourProducts__bottom .ourProducts__carousel .ourProducts__item .ourProducts__item-name {
   position: absolute;
-  font-size: 4rem;
+  font-size: clamp(4vw, 4vw, 4vw);
   font-weight: 700;
   z-index: 100;
 }
@@ -834,18 +834,25 @@ button {
   width: 100%;
   position: relative;
   background: #E1D9D1;
+  overflow: hidden;
+}
+.ourHistory::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
 }
 .ourHistory .ourHistory__bg-texture {
   width: 100%;
   height: 110%;
   position: absolute;
-  opacity: 10%;
   mix-blend-mode: darken;
-  object-fit: cover;
 }
 .ourHistory .ourHistory__bg-texture img {
   width: 100%;
   height: 100%;
+  clip-path: url(#mask);
+  object-fit: cover;
 }
 .ourHistory .ourHistory__bg-cards {
   display: flex;
@@ -865,7 +872,6 @@ button {
   align-items: center;
 }
 .ourHistory .ourHistory__bg-cards .ourHistory__bg-card img {
-  background: red;
   width: calc(100% - 5rem);
   height: 30vh;
   margin-bottom: 10rem;
@@ -918,28 +924,12 @@ button {
   margin: 0 auto;
 }
 
-.section__paper-effect2::before {
-  content: "";
+.paperMask {
+  width: 100%;
+  position: absolute;
   width: 100%;
   height: 100px;
-  background-image: url("../svg/paperEffect2.svg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: -15px;
-  z-index: 50;
-}
-.section__paper-effect2::after {
-  content: "";
-  width: 100%;
-  height: 100px;
-  background-image: url("../svg/paperEffect2.svg");
-  position: absolute;
-  bottom: -10px;
-  z-index: 100;
-  transform: rotate(180deg) scaleX(-1);
+  top: -30px;
 }
 
 /*# sourceMappingURL=index.css.map */
