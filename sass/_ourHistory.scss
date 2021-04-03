@@ -3,6 +3,7 @@
     width: 100%;
     position: relative;
     background: #E1D9D1;
+    overflow-x: hidden;
     &::before{
         content: "";
         width: 100%;

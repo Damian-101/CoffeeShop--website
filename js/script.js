@@ -10,7 +10,8 @@ function scrollFixed () {
        }
 }
 scrollFixed()
-let swiper
+document.addEventListener("load", () => {
+       let swiper
 if(window.innerWidth < 1000){
        swiper = new Swiper('.swiper-container', {
               width: null,
@@ -54,6 +55,7 @@ if(window.innerWidth > 1000){
                  },
      });
 }
+})
 const prevBtn = document.getElementById("prev-btn") 
 const nextBtn = document.getElementById("next-btn") 
 function customCarousel () {
