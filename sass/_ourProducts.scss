@@ -43,16 +43,21 @@ $white-text: #fff;
                 line-height: 0.8;
                 font-weight: $bold;
                 .ourProducts__heading-top{
-                    display: flex;
+                    display: inline-flex;
                     align-items: center;
+                    justify-content: start;
                     position: relative;
                     &::after{
                         content: "";
                         background-color: $white-bg;
-                        width: 100px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        width: 7rem;
                         height: 8px;
                         position: absolute;
-                        margin-left: 150px;
+                        // top: 0;
+                        right: -110px;
                     }
                 }
             }
