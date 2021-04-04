@@ -1,32 +1,38 @@
 @use "pageStyles" as *;
 .ourHistory{
     width: 100%;
+    height: 100%;
     position: relative;
     background: #E1D9D1;
-    overflow-x: hidden;
+    z-index: 200;
+    overflow: hidden;
     &::before{
         content: "";
+        width: 150%;
+        height: 150%;
+        position: absolute;
+        background-image: url("../images/ourHistory-bg-texture-new.png");
+    }
+    .ourHistory__bg-texture{
         width: 100%;
         height: 100%;
         position: absolute;
-    }
-    overflow: hidden;
-    .ourHistory__bg-texture{
-        width: 100%;
-        height: 110%;
-        position: absolute;
-        // opacity: 10%;
+        opacity: 10%;
         mix-blend-mode: darken;
+        top: -9px;
+        z-index: 3;
         img{
             width: 100%;
             height: 100%;
-            clip-path: url(#mask);
+            // clip-path: url(#mask);
             object-fit: cover;
+            position: relative;
         }
     }
     .ourHistory__bg-cards{
         display: flex;
         position: absolute;
+        overflow: hidden;
         width: 100%;
         height: 100%;
         align-items: center;
@@ -50,18 +56,18 @@
                 }
         }
         .ourHistory__bg-card:nth-child(1){
-            transform: rotate(-15deg);
+            transform: rotate($firstPic);
         }
         .ourHistory__bg-card:nth-child(2){
-            transform: rotate(25deg);
+            transform: rotate($secondPic);
             margin-left: 4rem;
         }
         .ourHistory__bg-card:nth-child(3){
-            transform: rotate(-3deg);
+            transform: rotate($thirdPic);
             margin-left: 30rem;
         }
         .ourHistory__bg-card:nth-child(4){
-            transform: rotate(17deg);
+            transform: rotate($fourthPic);
         }
     }
     .ourHistory__wraper{
@@ -98,36 +104,28 @@
     }
 }
 
-.paperMask{
-    width: 100%;
-    position: absolute;
-    width: 100%;
-    height: 100px;
-    top: -30px;
+.section__paper-effect2{
+    &::before{
+        content: "";
+        width: 100%;
+        height: 100px;
+        background-image: url("../svg/paperEffect2.svg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: -10px;
+        z-index: -1;
+    }
+    &::after{
+        content: "";
+        width: 100%;
+        height: 100px;
+        background-image: url("../svg/paperEffect2.svg");
+        position: absolute;
+        bottom: -10px;
+        z-index: -1;
+        transform: rotate(180deg) scaleX(-1);
+    }
 }
-
-// .section__paper-effect2{
-//     &::before{
-//         content: "";
-//         width: 100%;
-//         height: 100px;
-//         background-image: url("../svg/paperEffect2.svg");
-//         background-repeat: no-repeat;
-//         background-size: cover;
-//         position: absolute;
-//         left: 0;
-//         right: 0;
-//         top: -15px;
-//         z-index: 150;
-//     }
-//     &::after{
-//         content: "";
-//         width: 100%;
-//         height: 100px;
-//         background-image: url("../svg/paperEffect2.svg");
-//         position: absolute;
-//         bottom: -10px;
-//         z-index: 100;
-//         transform: rotate(180deg) scaleX(-1);
-//     }
-// }

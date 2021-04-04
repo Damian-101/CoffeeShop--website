@@ -9,7 +9,10 @@ $cWhite: #fff;
 $themeColor: #1B5D40;
 $greyBg: #EBEBEB;
 
-
+$firstPic: -15deg;
+$secondPic: 25deg;
+$thirdPic: 3deg;
+$fourthPic: 17deg;
 
 :root{
 --spacer--section-sm: 4rem;
@@ -40,7 +43,6 @@ html{
 }
 body{
     max-width: 100vw;
-    overflow-x: hidden;
 }
 .custom--container {
     margin: 0 2rem;

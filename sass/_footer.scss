@@ -9,7 +9,7 @@
     text-align: center;
     position: relative;
     background-image: url("../images/footer-bg.png");
-    z-index: 100;
+    z-index: 9;
     :is(.footer__para,.footer__site-rights){
         font-weight: $light;
     }

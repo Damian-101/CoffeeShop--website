@@ -2,7 +2,7 @@
 //  Left Group ---> | Left Group  |<---Right Group
 //                  |     &       |
 //                  | Right Group |
-
+@use "pageStyles" as *;
 .animation.is-visible{
     width: 100%;
     transition: all 0.5s;
@@ -17,7 +17,6 @@
         opacity: 100%;
     }
 }
-
 @keyframes left-center {
     0% {transform:translateX(-100%);opacity: 0;}
     90% {opacity: 100%;}
@@ -29,3 +28,20 @@
     100% {transform:translateX(0%);}
 }
 
+// image rotation on visible animation
+.img-rotate-second-animation.is-visible{
+    animation-name: rotateSecond;
+    animation-duration: 1.5s;
+}
+.img-rotate-third-animation.is-visible{
+    animation-name: rotateThird;
+    animation-duration: 1.5s;
+}
+@keyframes rotateSecond {
+    0% {transform: rotate(calc(#{$secondPic} - 10deg));}
+    100% {transform: rotate($secondPic)}
+}
+@keyframes rotateThird {
+    0% {transform: rotate(calc(#{$thirdPic} - 10deg));}
+    100% {transform: rotate($thirdPic)}
+}

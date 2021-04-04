@@ -40,25 +40,32 @@ $white-text: #fff;
         position: relative;
         z-index: 50;
             .ourProducts__heading{
+                display: inline-flex;
+                flex-direction: column;
                 line-height: 0.8;
                 font-weight: $bold;
                 .ourProducts__heading-top{
-                    display: inline-flex;
+                    display: flex;
                     align-items: center;
-                    justify-content: start;
                     position: relative;
-                    &::after{
-                        content: "";
-                        background-color: $white-bg;
-                        display: flex;
-                        justify-content: center;
-                        align-items: center;
-                        width: 7rem;
-                        height: 8px;
-                        position: absolute;
-                        // top: 0;
-                        right: -110px;
-                    }
+                    // &::after{
+                    //     content: "";
+                    //     background-color: $white-bg;
+                    //     display: flex;
+                    //     align-items: center;
+                    //     width: 7rem;
+                    //     height: 8px;
+                    //     position: absolute;
+                    //     // top: 0;
+                    //     right: -100px;
+                    // }
+                }
+                .ourProducts__dash{
+                    width: 45%;
+                    background: #fff;
+                    height: 8px;
+                    position: absolute;
+                    right: 0;
                 }
             }
             .ourProducts__para-wraper{
@@ -94,7 +101,7 @@ $white-text: #fff;
                 }
                 .ourProducts__item-name{
                     position: absolute;
-                    font-size: clamp(4vw, 4vw, 4vw);
+                    font-size:3rem;
                     font-weight: $bold;
                     z-index: 100;
                 }
@@ -112,6 +119,7 @@ $white-text: #fff;
                 position: relative;
                 z-index: 100;
             }
+            
 
         }
     }

@@ -10,8 +10,7 @@ function scrollFixed () {
        }
 }
 scrollFixed()
-document.addEventListener("load", () => {
-       let swiper
+let swiper
 if(window.innerWidth < 1000){
        swiper = new Swiper('.swiper-container', {
               width: null,
@@ -23,6 +22,9 @@ if(window.innerWidth < 1000){
                      320: {
                        slidesPerView: 1,
                      },
+                     800: {
+                       slidesPerView: 2, 
+                     }
                    },
                  // Optional parameters
                  direction: 'horizontal',
@@ -55,9 +57,8 @@ if(window.innerWidth > 1000){
                  },
      });
 }
-})
 const prevBtn = document.getElementById("prev-btn") 
-const nextBtn = document.getElementById("next-btn") 
+const nextBtn = document.getElementById("next-btn")
 function customCarousel () {
        window.nextDisable = false
        window.prevDisable = false
