@@ -1,0 +1,102 @@
+@use "pageStyles" as *;
+.body{
+    // width: 100vw;
+    // max-width: 100%;
+    display: flex;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 
+    "sidebar body"
+    ;
+}
+.body-wraper{
+    width: 100vw;
+    max-width: 100%;
+}
+.nav{
+    padding-top: .5rem ;
+    padding-bottom: .5rem;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    z-index: 1000;
+    background: #fff;
+    &::after{
+        content: "";
+        top: 0;
+        left: 0;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+    }
+    .nav__wraper{
+        padding: 0 5rem;
+        display: flex;
+        align-items: center;
+        position: relative;
+        justify-content: space-between;
+        width: 100%;
+        .nav__logo-wraper{
+            .nav__logo{
+                width: 20vw;
+                max-width: 70px;
+            }
+        }
+        .nav__side-bar{
+            font-size: 2rem;
+            font-weight: 500;
+            a{
+                text-decoration: none;
+                color: #000;
+                &:hover{
+                    transition: .1s;
+                    color: $themeColor;
+                }
+            }
+            .slider__bottom{
+                display: none;
+            }
+        }
+        .nav__sidebar-toggler{
+            z-index: 100;
+            // position: absolute;
+            right: 0;
+            z-index: 98;
+            svg{
+                color: #000;
+                width: 4rem;
+                height: 100%;
+            }
+            .nav__sidebar-screen-blur{
+                display: none;
+                background: #000;
+                opacity: 30%;
+                width: 100vw;
+                height: 100vh;
+                position: absolute;
+                left: 0;
+                top: 0;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1300px){
+    .nav-toggler-disable{
+        display: none;
+    }   
+    .nav__side-bar{
+        color: #fff;
+        a{
+            padding: 0 1.5rem;
+            display: inline-block !important;
+        }
+    }
+}
+.nav__fixed{
+    position: fixed !important;
+    &::after{
+        content: "";
+        opacity: 90%;
+    }
+}

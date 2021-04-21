@@ -1,0 +1,89 @@
+@use "pageStyles" as *;
+.footer{
+    padding: 8rem 0;
+    display: flex;
+    justify-content: center;
+    background-color: black;
+    color: $cWhite;
+    font-size: 1.3rem;
+    text-align: center;
+    position: relative;
+    background-image: url("../images/footer-bg.png");
+    z-index: 9;
+    :is(.footer__para,.footer__site-rights){
+        font-weight: $light;
+    }
+    .footer__container{
+        width: 100%;
+        .footer__logo-wraper{
+            img{
+                width: clamp(5rem,10vw,15rem);
+            }
+        }
+        .footer__para{
+            padding-top: 2rem;
+            width: 90%;
+            max-width: 600px;
+            margin: auto;
+        }
+    // footer bottom 
+        .footer-bottom{
+            width: 100%;
+            display: flex;
+            position: relative;
+            justify-content: center;
+            align-items: center;
+            padding-top: 10rem;
+            // footer nav 
+            .footer__nav-wraper{
+                position: absolute;
+                top: -35px;
+                .footer__nav{
+                    padding: 6rem 0;
+                    font-weight: $medium;
+                    li{
+                        padding: 0 1rem;
+                        a{
+                            text-decoration: none;
+                             color: $cWhite
+                        }
+                    }
+                }
+            }
+            .footer__item{
+                position: absolute;
+            }
+            .footer__site-rights{
+                left: 0;
+                white-space: pre;
+            }
+            .footer__social-media-logos-wraper{
+                right: 0;
+                .footer__social-media-logos{
+                    .footer__social-media-logo{
+                        color: $cWhite;
+                        padding: 0 .5rem;
+                        a{
+                            font-size: 2.5rem;
+                            color: $cWhite;
+                            text-decoration: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width:1300px){
+    .footer__nav-wraper{
+        top: inherit !important;
+    }
+}
+@media screen and (max-width: 800px){
+    .footer{
+        background-size: cover !important;
+        background-position: 1200px 0!important;
+
+    }
+}

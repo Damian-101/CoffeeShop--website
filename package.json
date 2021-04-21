@@ -3,12 +3,14 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@mysql/xdevapi": "8.0.23",
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-scripts": "4.0.3",
+    "sass": "^1.32.8",
     "web-vitals": "^1.0.1"
   },
   "scripts": {
@@ -34,5 +36,18 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
+  "main": "index.js",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Damian-101/CoffeeShop--website.git"
+  },
+  "author": "damian perera",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Damian-101/CoffeeShop--website/issues"
+  },
+  "homepage": "http://localhost:3001/index.html"
 }

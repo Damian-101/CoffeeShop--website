@@ -1,0 +1,130 @@
+@use "pageStyles" as *;
+.ourHistory{
+    width: 100%;
+    position: relative;
+    background: #E1D9D1;
+    z-index: 200;
+    overflow: hidden;
+    &::before{
+        content: "";
+        width: 150%;
+        height: 150%;
+        position: absolute;
+        background-image: url("../images/ourHistory-bg-texture-new.png");
+    }
+    .ourHistory__bg-texture{
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        opacity: 10%;
+        mix-blend-mode: darken;
+        top: -9px;
+        z-index: 3;
+        img{
+            width: 100%;
+            height: 100%;
+            // clip-path: url(#mask);
+            object-fit: cover;
+            position: relative;
+        }
+    }
+    .ourHistory__bg-cards{
+        display: flex;
+        position: absolute;
+        overflow: hidden;
+        width: 100%;
+        height: 100%;
+        align-items: center;
+        justify-content: center;
+        .ourHistory__bg-card{
+            background-color: #E6DFD4;
+            height: 40vh;
+            min-width: 330px;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+                img{
+                    width: calc(100% - 5rem);
+                    height: 30vh;
+                    margin-bottom: 10rem;
+                    margin-top: 5rem;
+                    position: absolute;
+                    opacity: 20%;
+                    object-fit: cover;
+                }
+        }
+        .ourHistory__bg-card:nth-child(1){
+            transform: rotate($firstPic);
+        }
+        .ourHistory__bg-card:nth-child(2){
+            transform: rotate($secondPic);
+            margin-left: 4rem;
+        }
+        .ourHistory__bg-card:nth-child(3){
+            transform: rotate($thirdPic);
+            margin-left: 30rem;
+        }
+        .ourHistory__bg-card:nth-child(4){
+            transform: rotate($fourthPic);
+        }
+    }
+    .ourHistory__wraper{
+        padding-bottom: calc(var(--spacer--section-sm)*1.5);
+        padding-top: calc(var(--spacer--section-sm)*1.5);
+        .ourHistory__top{
+            text-align: center;
+            .ourHistory__year{
+                font-family: 'Yellowtail', cursive;
+            }
+            .ourHistory__heading{
+                line-height: 1;
+                font-weight: $bold;
+            }
+        }
+        .ourHistory__bottom{
+            .ourHistory__para{
+                max-width: 60ch;
+                font-weight: $light;
+                text-align: center;
+                margin: 0 auto;
+            }
+            .ourHistory__action-wraper{
+                // width: 100%;
+                height: 100%;
+                display: flex;
+                flex: 1;
+                position: relative;
+                .ourHistory__action{
+                    margin: 0 auto;
+                }
+            }
+        }
+    }
+}
+
+.section__paper-effect2{
+    &::before{
+        content: "";
+        width: 100%;
+        height: 100px;
+        background-image: url("../svg/paperEffect2.svg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: -10px;
+        z-index: -1;
+    }
+    &::after{
+        content: "";
+        width: 100%;
+        height: 100px;
+        background-image: url("../svg/paperEffect2.svg");
+        position: absolute;
+        bottom: -10px;
+        z-index: -1;
+        transform: rotate(180deg) scaleX(-1);
+    }
+}
