@@ -1,20 +1,14 @@
 window.addEventListener("load", () => {
-    const navSideBarWraper = document.getElementsByClassName("nav-side-bar-wraper")[0];
-    const navSideBar = document.getElementsByClassName("nav-side-bar")[0];
-    const sideBar = document.getElementsByClassName("side-bar")[0];
-    const screenWidth = innerWidth;
-    console.log(navSideBarWraper)
+    const sideBar = document.getElementsByClassName("nav__right-sec-nav")[0];
+    const toggleBtn = document.getElementById("toggleBtn")
+    const width = window.innerWidth
+    console.log(width)
 
-    // add or remove classes on screen change 
-        if(screenWidth < 1300){
-            navSideBarWraper.classList.add("dis-none")
-            // get and add nav side bar values to the sideBar
-            document.getElementsByClassName("side-bar")[0].appendChild(navSideBar)
-        }
-
-    // add classes on btn click 
-    document.getElementById("nav__sidebar-toggler").addEventListener("click", () => {
-        sideBar.classList.toggle("side-bar-width")
-        document.body.style.overflow = "hidden"
-    })
+    if(width < 1000){
+        toggleBtn.addEventListener("click",function(){
+            sideBar.classList.toggle("toggle-sidebar")
+            document.getElementById("sidebar--overlay").classList.toggle("sidebar--overlay-transition")
+        })
+    }
+    
 })

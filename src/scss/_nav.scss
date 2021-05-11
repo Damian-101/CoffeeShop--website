@@ -1,102 +1,107 @@
 @use "pageStyles" as *;
-.body{
-    // width: 100vw;
-    // max-width: 100%;
-    display: flex;
-    grid-template-columns: 1fr 1fr;
-    grid-template-areas: 
-    "sidebar body"
-    ;
+
+@mixin rest-anchor {
+    text-decoration: none;
 }
-.body-wraper{
-    width: 100vw;
-    max-width: 100%;
-}
-.nav{
-    padding-top: .5rem ;
-    padding-bottom: .5rem;
+.nav-wraper{
     width: 100%;
-    position: absolute;
-    top: 0;
-    z-index: 1000;
-    background: #fff;
-    &::after{
-        content: "";
-        top: 0;
-        left: 0;
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        z-index: -1;
-    }
-    .nav__wraper{
-        padding: 0 5rem;
+    background: $c-white;
+    position: fixed;
+    border-bottom-left-radius: 1.5rem;
+    border-bottom-right-radius: 1.5rem;
+    box-shadow: 0 3px 20px rgba(0,0,0,16);
+    z-index: 999;
+    .nav{
         display: flex;
-        align-items: center;
-        position: relative;
-        justify-content: space-between;
-        width: 100%;
-        .nav__logo-wraper{
-            .nav__logo{
-                width: 20vw;
-                max-width: 70px;
-            }
+        height: 70px;
+        .nav__left-sec{
+            display: flex;
+            width: 100%;
+            height: 100%;
+            position: relative;
+            align-items: center;
         }
-        .nav__side-bar{
-            font-size: 2rem;
-            font-weight: 500;
-            a{
-                text-decoration: none;
-                color: #000;
-                &:hover{
-                    transition: .1s;
-                    color: $themeColor;
+        .nav__right-sec{
+            display: flex;
+            align-items: center;
+            height: 100%;
+            .toggle-btn{
+                margin-left:auto;
+                position: relative;
+                z-index: 1000;
+            }
+            .nav__right-sec-nav{
+                margin-left:auto;
+                white-space: nowrap;
+                li {
+                    font-weight: $medium;
+                    a{
+                        @include rest-anchor;
+                        color: $cBlack
+                    }
                 }
-            }
-            .slider__bottom{
-                display: none;
-            }
-        }
-        .nav__sidebar-toggler{
-            z-index: 100;
-            // position: absolute;
-            right: 0;
-            z-index: 98;
-            svg{
-                color: #000;
-                width: 4rem;
-                height: 100%;
-            }
-            .nav__sidebar-screen-blur{
-                display: none;
-                background: #000;
-                opacity: 30%;
-                width: 100vw;
-                height: 100vh;
-                position: absolute;
-                left: 0;
-                top: 0;
             }
         }
     }
 }
 
-@media screen and (min-width: 1300px){
-    .nav-toggler-disable{
-        display: none;
-    }   
-    .nav__side-bar{
-        color: #fff;
-        a{
-            padding: 0 1.5rem;
-            display: inline-block !important;
+@media only screen and (max-width:1000px) {
+    .nav__left-logo{
+        width:150px;
+    }
+    .nav__right-sec-nav{
+        font-size: 1.4rem;
+        background: $cWhite;
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        justify-content: center;
+        transition: all 0.8s;
+        width: 260px;
+        transform: translateX(calc(-100% - 0px));
+        li{
+            padding: 5rem 2rem;
         }
     }
-}
-.nav__fixed{
-    position: fixed !important;
-    &::after{
-        content: "";
-        opacity: 90%;
+    .sidebar--overlay{
+        width: 100vw;
+        height: 100vh;
+        background: #000;
+        opacity: 0%;
+        position: fixed;
+        transition: .5s all;
+        z-index: -1;
     }
+}
+
+@media only screen and (min-width: 1000px){
+    .nav__right-sec-nav{
+        font-size:1.8rem;
+        li{
+            display: inline-block;
+        }
+        li:not(li:last-child){
+            padding-right:8rem;
+        }
+
+    }
+}
+
+@media screen and (min-width:700px){
+    .nav__left-logo{
+        width: 300px;
+    }
+}
+
+.toggle-sidebar{
+    transform: translateX(0) !important;
+}
+
+.sidebar--overlay-transition{
+    display: block !important;
+    opacity: 70%;
+    z-index: 900;
 }

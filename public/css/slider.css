@@ -1,0 +1,58 @@
+:root{
+  --side-bar-size: 250px;
+  --negative: -;
+}
+
+/*# sourceMappingURL=slider.css.map */
+
+.dis-none {
+  display: none;
+}
+
+.side-bar{
+  /* display: none; */
+  position: fixed;
+  display: block;
+  background-color: #fff !important;
+  z-index: 10000;
+  position: relative;
+  transition: padding .6s;
+  position: relative;
+}
+.side-bar .nav-side-bar {
+  width: var(--side-bar-size);
+  height: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  left: calc(var(--side-bar-size) - var(--side-bar-size) * 2);
+  transition: all 0.6s;
+}
+
+.nav-side-bar > *{
+  padding: 4rem 0;
+  font-size: 1.8rem
+}
+
+.side-bar .nav-side-bar{
+  height: 100vh;
+  position: fixed;
+}
+
+.side-bar-width{
+  padding-right: var(--side-bar-size) !important;
+}
+.side-bar-width.side-bar * {
+    left: 0;
+}
+
+.nav-side-bar > .slider__bottom{
+  display: flex !important;
+  align-items: center;
+  border-top: 1px solid #000;
+  width: 100%;
+  height: 80px;
+  position: absolute;
+  bottom: 0;
+}

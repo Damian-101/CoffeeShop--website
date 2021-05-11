@@ -1,0 +1,19 @@
+.d-i-block li{
+    display: inline-block;
+}
+
+*,
+::after,
+::before {
+    box-sizing: border-box;
+}
+html{
+    font-size: 62.5%;
+    cursor: context-menu;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    font-family: "poppins";
+}

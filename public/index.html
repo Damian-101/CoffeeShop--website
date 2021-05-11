@@ -27,9 +27,36 @@
     <title>React App</title>
   </head>
   <body>
+    <header>
+      <nav class="nav">
+        <!-- left sec  -->
+        <div class="nav__left-sec">
+          <img src="/coffee-shop-site/src/images/logo.png" alt="navlogo" class="nav__left-logo"/>
+        </div>
+        <!-- right sec  -->
+        <div class="nav__right-sec">
+          <div class="toggle-btn responsive" id="toggleBtn">
+            <svg xmlns="http://www.w3.org/2000/svg" width="30.75" height="25" viewBox="0 0 30.75 25">
+              <g id="Group_886" data-name="Group 886" transform="translate(-304.25 -30)">
+                <line id="Line_1" data-name="Line 1" x2="30.75" transform="translate(304.25 32.5)" fill="none" stroke="#000" stroke-width="5"/>
+                <line id="Line_2" data-name="Line 2" x2="30.75" transform="translate(304.25 42.5)" fill="none" stroke="#000" stroke-width="5"/>
+                <line id="Line_3" data-name="Line 3" x2="30.75" transform="translate(304.25 52.5)" fill="none" stroke="#000" stroke-width="5"/>
+              </g>
+            </svg>            
+          </div>
+          <div class="nav__right-sec-nav-wraper">
+            <ul class="nav__right-sec-nav">
+              <li><a href="#">Home</a></li>
+              <li><a href="#">Menu</a></li>
+              <li><a href="#">Locations</a></li> 
+              <li><a href="#">Contact Us</a></li> 
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
     <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
-    <!-- scripts  -->
   </body>
 </html>

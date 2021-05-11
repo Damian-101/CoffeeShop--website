@@ -1,0 +1,99 @@
+.testimonials {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  background-color: #e0dcd9;
+  overflow: hidden;
+  position: relative;
+  &::before{
+    content: "";
+    width: 50%;
+    height: 100%;
+    display: block;
+    position: absolute;
+    background-image: url("../images/testimonials-bg-img.png");
+    background-position: -100px 100px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 4%;
+    left: 0;
+  }
+  .testimonials__top {
+    text-align: center;
+    .testimonials__heading{
+      text-transform: uppercase;
+    }
+  }
+  .testimonials__bottom {
+    .carousel-btn-wraper {
+      display: table;
+      margin: 0 auto;
+    }
+    .testimonials__bottom-testimonials {
+      overflow: visible;
+      position: relative;
+      .testimonials__bottom-testimonial-reviewer {
+        padding-top: 1.5rem;
+        font-size: 1.8rem;
+        text-transform: capitalize;
+      }
+      .testimonials__carousel-btn {
+        display: inline-block;
+        position: relative;
+        top: 0;
+        padding: 0 1rem;
+      }
+      .testimonials__bottom-testimonial-wraper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        .testimonials__bottom-testimonial {
+          max-width: 700px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 62em) {
+  .testimonials {
+    .testimonials__bottom {
+      .testimonials__bottom-testimonials {
+        .testimonials__bottom-testimonial-reviewer {
+          padding-top: 1.5rem;
+          font-size: 2rem;
+        }
+        .testimonials__carousel-btn {
+          position: absolute;
+        }
+        #testimonials-prevBtn {
+          left: -15px;
+        }
+        #testimonials-nextBtn {
+          right: -15px;
+        }
+        .testimonials__bottom-testimonial-wraper {
+          .testimonials__bottom-testimonial {
+            max-width: 800px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 87em) {
+  .testimonials {
+    .testimonials__bottom {
+      .testimonials__bottom-testimonials {
+        .testimonials__bottom-testimonial-wraper {
+          .testimonials__bottom-testimonial {
+            max-width: 950px;
+          }
+        }
+      }
+    }
+  }
+}
