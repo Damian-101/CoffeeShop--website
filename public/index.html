@@ -1,62 +1,370 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
-    <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
-    <meta
-      name="description"
-      content="Web site created using create-react-app"
+    <title>Coffee House/HomePage</title>
+    <!-- swiper carousel  -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css"/>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+    <!-- normalize styles  -->
+    <link rel="stylesheet" href="/public/css/slider.css" />
+    <!-- carousel stylesheet -->
+    <link rel="stylesheet" href="/public/css/carousel.css" />
+    <!-- main stylesheet  -->
+    <link rel="stylesheet" href="/public/css/index.css" />
+    <!-- common styles  -->
+    <link rel="stylesheet" href="/public/css/commonStyles.css" />
+    <!-- font awesome  -->
+    <!-- <link
+      href="/your-path-to-fontawesome/css/fontawesome.css"
+      type="text/html"
+      rel="stylesheet"
     />
-    <link rel="stylesheet" href="../css/index.css"/>
-    <!--
-      manifest.json provides metadata used when your web app is installed on a
-      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
-    -->
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <!--
-      Notice the use of %PUBLIC_URL% in the tags above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
-
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
-    -->
-    <title>React App</title>
+    <link
+      href="/your-path-to-fontawesome/css/brands.css"
+      type="text/html"
+      rel="stylesheet"
+    />
+    <link
+      href="/your-path-to-fontawesome/css/solid.css"
+      type="text/html"
+      rel="stylesheet"
+    /> -->
+    <link
+      href="../coffee-shop-site/src/css/stylesheet.css"
+    />
   </head>
   <body>
-    <header>
-      <nav class="nav">
-        <!-- left sec  -->
-        <div class="nav__left-sec">
-          <img src="/coffee-shop-site/src/images/logo.png" alt="navlogo" class="nav__left-logo"/>
-        </div>
-        <!-- right sec  -->
-        <div class="nav__right-sec">
-          <div class="toggle-btn responsive" id="toggleBtn">
-            <svg xmlns="http://www.w3.org/2000/svg" width="30.75" height="25" viewBox="0 0 30.75 25">
-              <g id="Group_886" data-name="Group 886" transform="translate(-304.25 -30)">
-                <line id="Line_1" data-name="Line 1" x2="30.75" transform="translate(304.25 32.5)" fill="none" stroke="#000" stroke-width="5"/>
-                <line id="Line_2" data-name="Line 2" x2="30.75" transform="translate(304.25 42.5)" fill="none" stroke="#000" stroke-width="5"/>
-                <line id="Line_3" data-name="Line 3" x2="30.75" transform="translate(304.25 52.5)" fill="none" stroke="#000" stroke-width="5"/>
-              </g>
-            </svg>            
+      <!-- nav bar -->
+      <nav class="nav-wraper">
+        <div class="custom--container nav">
+          <!-- left sec  -->
+          <div class="nav__left-sec">
+            <img src="public/images/logo-dark.png" alt="navlogo" class="nav__left-logo"/>
           </div>
-          <div class="nav__right-sec-nav-wraper">
-            <ul class="nav__right-sec-nav">
-              <li><a href="#">Home</a></li>
-              <li><a href="#">Menu</a></li>
-              <li><a href="#">Locations</a></li> 
-              <li><a href="#">Contact Us</a></li> 
-            </ul>
+          <!-- right sec  -->
+          <div class="nav__right-sec">
+            <div class="toggle-btn responsive" id="toggleBtn">
+              <svg xmlns="http://www.w3.org/2000/svg" width="30.75" height="25" viewBox="0 0 30.75 25">
+                <g id="Group_886" data-name="Group 886" transform="translate(-304.25 -30)">
+                  <line id="Line_1" data-name="Line 1" x2="30.75" transform="translate(304.25 32.5)" fill="none" stroke="#000" stroke-width="5"/>
+                  <line id="Line_2" data-name="Line 2" x2="30.75" transform="translate(304.25 42.5)" fill="none" stroke="#000" stroke-width="5"/>
+                  <line id="Line_3" data-name="Line 3" x2="30.75" transform="translate(304.25 52.5)" fill="none" stroke="#000" stroke-width="5"/>
+                </g>
+              </svg>            
+            </div>
+            <div class="nav__right-sec-nav-wraper">
+              <ul class="nav__right-sec-nav">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Menu</a></li>
+                <li><a href="#">Locations</a></li> 
+                <li><a href="#">Contact Us</a></li> 
+              </ul>
+            </div>
           </div>
         </div>
       </nav>
-    </header>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
+      <div class="sidebar--overlay" id="sidebar--overlay"></div>
+
+      <!-- hero  -->
+      <section>
+        <div class="hero">
+          <div class="custom--container">
+            <div class="hero__content">
+              <div class="hero__logo-wraper">
+                <img src="public/images/logo.png" class="hero__logo" alt="logo"/>
+              </div>
+              <p class="hero__para para-spacer">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
+                incididunt ut labore et dolore magna aliqua. Ut enim
+              </p>
+              <button class="btn">our menu</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- our products -->
+      <section>
+        <div class="ourProducts section-spacer">
+          <div class="custom--container">
+            <div class="ourProducts__top">
+              <div class="ourProducts__top-info">
+                <h1 class="ourProducts__top-info-heading section-main-heading">
+                  best products from all around the world
+                </h1>
+                <p class="ourProducts__top-info-para para-spacer">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                  sed do eiusmod tempor incididunt ut labore et dolore magnaLorem 
+                  ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                </p>
+                <button class="btn">Our Menu</button>
+              </div>
+              <div class="ourProducts__top-ref-img-wraper">
+                <div class="ourProducts__top-ref-img">
+                  <img src="public/images/ourProducts-ref-img.png" alt="ref image"/>
+                </div>                
+              </div>
+            </div>
+            <div class="ourProducts__bottom">
+              <div class="ourProducts__bottom-top">
+                <h1 class="section-main-heading ourProducts__bottom-top-heading">our products</h1>
+                <p class="ourProducts__bottom-top-para para-spacer">
+                  Lorem ipsum dolor sit amet, consetetur sadipscing elitr, 
+                  sed diam nonumy eirmod tempor invidunt
+                </p>
+              </div>
+              <div class="ourProducts__bottom-bottom">
+                <div class="ourProducts__bottom-bottom-items">
+                  <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide item">
+                        <img src="public/images/ourProducts-bevarages.png" alt="item img"/>
+                      </div>
+                      <div class="swiper-slide item">
+                        <img src="public/images/ourProducts-pastries.png" alt="item img"/>
+                      </div>
+                      <div class="swiper-slide item">
+                        <img src="public/images/ourProducts-coffee.png" alt="item img"/>
+                      </div>
+                      <div class="swiper-slide item">
+                        <img src="public/images/ourProducts-pastries.png" alt="item img"/>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="carousel-btns">
+                    <div class="carousel-btn" id="ourProducts-prev">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="69.119" height="69.119" viewBox="0 0 69.119 69.119">
+                        <g id="Group_1040" data-name="Group 1040" transform="translate(2974.001 -2545.999)">
+                          <circle id="Ellipse_3" data-name="Ellipse 3" cx="34.56" cy="34.56" r="34.56" transform="translate(-2974.001 2545.999)" fill="#1b5d40"/>
+                          <path id="Path_362" data-name="Path 362" d="M0,12.8,12.8,0,25.6,12.8" transform="translate(-2945.521 2593.676) rotate(-90)" fill="none" stroke="#fff" stroke-width="10"/>
+                        </g>
+                      </svg>                    
+                    </div>
+                    <div class="carousel-btn nextBtn" id="ourProducts-next">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="69.119" height="69.119" viewBox="0 0 69.119 69.119">
+                        <g id="Group_1043" data-name="Group 1043" transform="translate(4325.365 -6368.94)">
+                          <g id="Group_1042" data-name="Group 1042" transform="translate(-7230.247 8984.059) rotate(180)">
+                            <circle id="Ellipse_3" data-name="Ellipse 3" cx="34.56" cy="34.56" r="34.56" transform="translate(-2974.001 2545.999)" fill="#1b5d40"/>
+                            <path id="Path_362" data-name="Path 362" d="M0,12.8,12.8,0,25.6,12.8" transform="translate(-2945.521 2593.676) rotate(-90)" fill="none" stroke="#fff" stroke-width="10"/>
+                          </g>
+                        </g>
+                      </svg>                    
+                    </div>
+                  </div>
+                </div>
+              </div>
+          </div>
+        </div>
+        
+      <!-- about us section  -->
+      </section>
+        <div class="aboutUs section-spacer">
+          
+          <div class="paper-effect-top-wraper">
+            <img src="public/images/paper-effect.svg" class="paper-effect"/>            
+          </div>
+          <div class="paper-effect-bottom-wraper">
+            <img src="public/images/paper-effect-bottom.svg" class="paper-effect"/>            
+          </div>
+
+          <div class="custom--container">
+            <div class="aboutUs__row aboutUs__row-left" id="aboutUs__row1">
+              <div class="aboutUs__row-img">
+                <img src="public/images/aboutUs-row1.png" alt ="about us img"/>
+              </div>
+              <div class="aboutUs__row-texts">
+                <h2 class="aboutUs__row-texts-heading">
+                  We started The Caffee In <span class="aboutUs-highlight">1998</span>
+                </h2>
+                <p class="aboutUs__row-texts-para">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                  sed do eiusmod tempor incididunt ut labore et dolore magnaLorem 
+                  ipsum
+                </p>
+              </div>
+            </div>
+
+            <div class="aboutUs__row-divide-line"></div>           
+
+            <div class="aboutUs__row aboutUs__row-center" id="aboutUs__row2">
+              <div class="aboutUs__row-img">
+                <img src="public/images/aboutUs-row2.png" alt ="about us img"/>
+              </div>
+              <div class="aboutUs__row-texts">
+                <h2 class="aboutUs__row-texts-heading">
+                  Trying <span class="aboutUs-highlight">our</span> Best 
+                </h2>
+                <p class="aboutUs__row-texts-para">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                  sed do eiusmod tempor incididunt ut labore et dolore magnaLorem 
+                  ipsum dolor sit amet
+                </p>
+              </div>
+            </div>
+
+            <div class="aboutUs__row-divide-line"></div>      
+
+            <div class="aboutUs__row aboutUs__row-right" id="aboutUs__row3">
+              <div class="aboutUs__row-img">
+                <img src="public/images/aboutUs-row3.png" alt ="about us img"/>
+              </div>
+              <div class="aboutUs__row-texts">
+                <h2 class="aboutUs__row-texts-heading">Making A <span class="aboutUs-highlight">Difference</span></h2>
+                <p class="aboutUs__row-texts-para">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                  sed do eiusmod tempor incididunt ut labore et dolore magnaLorem 
+                  ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- testimonals  -->
+      <section>
+        <div class="testimonials">
+          <div class="section-spacer custom--container">
+            <div class="testimonials__top">
+              <h1 class="testimonals__heading section-main-heading">Testimonials</h1>
+            </div>
+
+            <div class="testimonials__bottom">
+              <div class="testimonials__bottom-testimonials">
+                <div class="swiper-testimonial">
+                  <div class="swiper-wrapper para-spacer">
+                    <div class="testimonials__bottom-testimonial-wraper swiper-slide">
+                      <p class="testimonials__bottom-testimonial">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                        sed do eiusmod tempor incididunt ut labore et dolore 
+                        magnaLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                      </p>
+                      <div class="testimonials__bottom-testimonial-reviewer">alex matt</div>
+                    </div>
+                    <div class="testimonials__bottom-testimonial-wraper swiper-slide">
+                      <p class="testimonials__bottom-testimonial">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                        sed do eiusmod tempor incididunt ut labore et dolore 
+                        magnaLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                      </p>
+                      <div class="testimonials__bottom-testimonial-reviewer">alex matt</div>
+                    </div>
+                    <div class="testimonials__bottom-testimonial-wraper swiper-slide">
+                      <p class="testimonials__bottom-testimonial">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                        sed do eiusmod tempor incididunt ut labore et dolore 
+                        magnaLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                      </p>
+                      <div class="testimonials__bottom-testimonial-reviewer">alex matt</div>
+                    </div>
+                  </div>
+                </div>
+                <!-- btns  -->
+                <div class="carousel-btn-wraper">
+                  <div class="carousel-btn testimonials__carousel-btn prevBtn" id="testimonials-prevBtn">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="69.119" height="69.119" viewBox="0 0 69.119 69.119">
+                      <g id="Group_1040" data-name="Group 1040" transform="translate(2974.001 -2545.999)">
+                        <circle id="Ellipse_3" data-name="Ellipse 3" cx="34.56" cy="34.56" r="34.56" transform="translate(-2974.001 2545.999)" fill="#1b5d40"/>
+                        <path id="Path_362" data-name="Path 362" d="M0,12.8,12.8,0,25.6,12.8" transform="translate(-2945.521 2593.676) rotate(-90)" fill="none" stroke="#fff" stroke-width="10"/>
+                      </g>
+                    </svg>                    
+                  </div>
+                  <div class="carousel-btn nextBtn testimonials__carousel-btn" id="testimonials-nextBtn">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="69.119" height="69.119" viewBox="0 0 69.119 69.119">
+                      <g id="Group_1043" data-name="Group 1043" transform="translate(4325.365 -6368.94)">
+                        <g id="Group_1042" data-name="Group 1042" transform="translate(-7230.247 8984.059) rotate(180)">
+                          <circle id="Ellipse_3" data-name="Ellipse 3" cx="34.56" cy="34.56" r="34.56" transform="translate(-2974.001 2545.999)" fill="#1b5d40"/>
+                          <path id="Path_362" data-name="Path 362" d="M0,12.8,12.8,0,25.6,12.8" transform="translate(-2945.521 2593.676) rotate(-90)" fill="none" stroke="#fff" stroke-width="10"/>
+                        </g>
+                      </g>
+                    </svg>                    
+                  </div>
+                </div>
+              </div>             
+            </div>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div class="newsletter">
+          <div class="custom--container section-spacer newsletter__content">
+            <div class="newsletter__left">
+              <h1 class="newsletter__heading section-main-heading">subscribe</h1>
+              <h3 class="newsletter__subHeading">subscribe to our newsletter</h3>
+              <p class="newsletter__para para-spacer">
+                Lorem ipsum dolor sit amet, consetetur 
+                sadipscing elitr, sed diam nonumy eirmod tempor invidunt
+              </p>
+            </div>
+            <div class="newsletter__right">
+              <form class="newsletter__form">
+                <input type="text" class="newsletter__input" placeholder="ENTER YOUR EMAIL" name="newsletter__email" id="newsletter__input"/>
+                <button class="newsletter__btn" type="submit" id="newsletter__submit">Subscribe</button>
+              </form>
+              <p id="errorMsg"></p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div class="footer">
+          <div class="section-spacer footer__content">
+
+            <div class="footer_left">
+              <div class="footer__logo">
+                <img src="public/images/logo.png" alt="logo"/>
+              </div>
+            </div>
+
+            <div class="footer__middle footer__group">
+              <div class="footer__openHours ">
+                <div class="footer__openHours-heading">Open Hours</div>
+                <div class="footer__openHours-timeTable">
+                  <table>
+                    <tr class="footer__openHours-timeTable-row">
+                      <td>Mon - Fri</td>
+                      <td>4.00am - 9pm</td>
+                    </tr>
+                    <tr class="footer__openHours-timeTable-row">
+                      <td>Sat - Sun</td>
+                      <td>7.00am - 5pm</td>
+                    </tr>
+                  </table>
+                </div>
+              </div>
+              <div class="footer__openHours-contact-wraper">
+                <ul class="footer__openHours-contact">
+                  <li>012 3333 444</li>
+                  <li>934 4434 343</li>
+                  <li>coffeehousehelp@gmail.com</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="footer__right-wraper footer__group">
+              <ul class="footer__right">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Locations</a></li>
+                <li><a href="#">Contact Us</a></li>
+                <li><a href="#">Menu</a></li>
+              </ul>
+              <div class="footer__social-media-logos">
+                <a href="#"><img src="public/images/facebook-logo.png"/></a>
+                <a href="#"><img src="public/src/images/instagram-logo.png"/></a>
+                <a href="#"><img src="public/images/twitter-logo.png"/></a>
+              </div>
+            </div>
+            <div class="footer__copyright footer__group">2021,All Rights Reserved</div>
+          </div>
+        </div>
+      </section>
+
+    <!-- javascript files -->
     <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="public/js/slider.js"></script>
+    <script src="public/js/script.js"></script>
+    <script src="public/js/newsletterForm.js"></script>
   </body>
 </html>
