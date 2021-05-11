@@ -24,7 +24,7 @@ const sql =
 
 
 app.get("/", (req,res) => {
-    res.sendFile("index.html", {root: __dirname})
+    res.sendFile("homepage.html", {root: __dirname})
 })
 
 app.use("/public",express.static(__dirname + "/public"))
