@@ -11,10 +11,8 @@ const con = mysql.createConnection({
 })
 
 con.connect((err) => {
-    if (err) throw err;
     console.log("connected");
     con.query(sql,function(err,result){
-        if(err)throw err;
         global.itemData = result
     })
 })
