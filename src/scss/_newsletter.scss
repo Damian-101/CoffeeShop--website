@@ -71,10 +71,11 @@
       }
       .newsletter__right{
         display: flex;
-        justify-content: flex-end;
-        width: 50%;
+        align-items: flex-end;
+        width: 100%;
+        flex-direction: column;   
         .newsletter__form{
-          width: 100%;
+          width: 80%;
           max-width: 56rem;
           height: 10rem;
           .newsletter__input{

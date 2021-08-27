@@ -1,0 +1,28 @@
+{
+  "files": {
+    "main.css": "./static/css/main.09b7c1a4.chunk.css",
+    "main.js": "./static/js/main.df688fc8.chunk.js",
+    "main.js.map": "./static/js/main.df688fc8.chunk.js.map",
+    "runtime-main.js": "./static/js/runtime-main.5a694f3b.js",
+    "runtime-main.js.map": "./static/js/runtime-main.5a694f3b.js.map",
+    "static/js/2.bd87be16.chunk.js": "./static/js/2.bd87be16.chunk.js",
+    "static/js/2.bd87be16.chunk.js.map": "./static/js/2.bd87be16.chunk.js.map",
+    "static/js/3.2694c2eb.chunk.js": "./static/js/3.2694c2eb.chunk.js",
+    "static/js/3.2694c2eb.chunk.js.map": "./static/js/3.2694c2eb.chunk.js.map",
+    "index.html": "./index.html",
+    "static/css/main.09b7c1a4.chunk.css.map": "./static/css/main.09b7c1a4.chunk.css.map",
+    "static/js/2.bd87be16.chunk.js.LICENSE.txt": "./static/js/2.bd87be16.chunk.js.LICENSE.txt",
+    "static/media/index.css": "./static/media/testimonials-bg-img.475595d2.png",
+    "static/media/coffee-latte-img.8f47c547.png": "./static/media/coffee-latte-img.8f47c547.png",
+    "static/media/dropdown-icon.86783f2f.svg": "./static/media/dropdown-icon.86783f2f.svg",
+    "static/media/logo-dark.38e1dc26.png": "./static/media/logo-dark.38e1dc26.png",
+    "static/media/logo.001d05d1.png": "./static/media/logo.001d05d1.png",
+    "static/media/_menuPage.scss": "./static/media/scratch effect.b4726db2.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.5a694f3b.js",
+    "static/js/2.bd87be16.chunk.js",
+    "static/css/main.09b7c1a4.chunk.css",
+    "static/js/main.df688fc8.chunk.js"
+  ]
+}

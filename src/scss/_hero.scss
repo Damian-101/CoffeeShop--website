@@ -23,22 +23,35 @@
     }
 }
 
-.hero__logo{
-    width:100%;
+.hero__heading{
+    color: #fff;
+    line-height: 1;
+    *{
+        font-family: 'AngleciaProDisplay-Regular';
+        font-size: 6rem;
+    }
+    
 }
+
 @media screen and (min-width:700px){
-    .hero__logo{
-        width:60rem;
+    .hero__heading{
+        *{
+            font-size: 8rem;
+        }
     }
 }
 @media screen and (min-width:992px){
-    .hero__logo{
-        width:60rem;
+    .hero__heading{
+        *{
+            font-size: 10rem;
+        }
     }
 }
 @media screen and (min-width:1392px){
-    .hero__logo{
-        width:100%;
+    .hero__heading{
+        *{
+            font-size: 14rem;
+        }
     }
 }
 //animations 

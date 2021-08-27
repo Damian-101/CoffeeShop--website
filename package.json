@@ -4,24 +4,35 @@
   "engines": {
     "node": "14.15.4"
   },
-  "main": "api.js",
+  "main": "./src/index.js",
+  "homepage": "./",
+  "type": "module",
   "private": true,
   "dependencies": {
-    "@babel/core": "^7.14.0",
     "@mysql/xdevapi": "8.0.23",
     "@testing-library/jest-dom": "^5.12.0",
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
+    "ignore-styles": "^5.0.1",
+    "mongodb": "^3.6.9",
+    "mongodb-client-encryption": "^1.2.4",
     "mysql": "^2.18.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
+    "react-height": "^3.0.1",
+    "react-jss": "^10.6.0",
+    "react-markdown-loader": "^1.3.1",
     "react-scripts": "4.0.3",
-    "sass": "^1.32.12",
+    "sass": "^1.32.13",
     "web-vitals": "^1.1.2"
   },
   "scripts": {
-    "start": "node api.js",
-    "build": "webpack"
+    "start": "react-scripts start",
+    "build": "react-scripts build webpack",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "babel": "node_modules/.bin/babel src -d functions/src",
+    "ssr": "nodemon server.js"
   },
   "browserslist": {
     "production": [
@@ -36,7 +47,24 @@
     ]
   },
   "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
-  "devDependencies": {},
+  "devDependencies": {
+    "@babel/cli": "^7.14.3",
+    "@babel/core": "^7.14.3",
+    "@babel/plugin-proposal-class-properties": "^7.13.0",
+    "@babel/polyfill": "^7.12.1",
+    "@babel/preset-env": "^7.14.4",
+    "@babel/preset-es2015": "^7.0.0-beta.53",
+    "@babel/preset-react": "^7.13.13",
+    "@babel/register": "^7.13.16",
+    "file-loader": "^6.2.0",
+    "react-dom": "^17.0.1"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Damian-101/CoffeeShop--website.git"

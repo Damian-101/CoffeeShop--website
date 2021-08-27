@@ -7,31 +7,15 @@
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css"/>
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
     <!-- normalize styles  -->
-    <link rel="stylesheet" href="/public/css/slider.css" />
+    <link rel="stylesheet" href="static/css/slider.css" />
     <!-- carousel stylesheet -->
-    <link rel="stylesheet" href="/public/css/carousel.css" />
+    <link rel="stylesheet" href="static/css/carousel.css" />
     <!-- main stylesheet  -->
-    <link rel="stylesheet" href="/public/css/index.css" />
+    <link rel="stylesheet" href="static/css/index.css" />
     <!-- common styles  -->
-    <link rel="stylesheet" href="/public/css/commonStyles.css" />
-    <!-- font awesome  -->
-    <!-- <link
-      href="/your-path-to-fontawesome/css/fontawesome.css"
-      type="text/html"
-      rel="stylesheet"
-    />
+    <link rel="stylesheet" href="static/css/commonStyles.css" />
     <link
-      href="/your-path-to-fontawesome/css/brands.css"
-      type="text/html"
-      rel="stylesheet"
-    />
-    <link
-      href="/your-path-to-fontawesome/css/solid.css"
-      type="text/html"
-      rel="stylesheet"
-    /> -->
-    <link
-      href="../coffee-shop-site/src/css/stylesheet.css"
+      href="./src/css/stylesheet.css"
     />
   </head>
   <body>
@@ -40,7 +24,7 @@
         <div class="custom--container nav">
           <!-- left sec  -->
           <div class="nav__left-sec">
-            <img src="public/images/logo-dark.png" alt="navlogo" class="nav__left-logo"/>
+            <img src="static/media/logo-dark.png" alt="navlogo" class="nav__left-logo"/>
           </div>
           <!-- right sec  -->
           <div class="nav__right-sec">
@@ -55,10 +39,11 @@
             </div>
             <div class="nav__right-sec-nav-wraper">
               <ul class="nav__right-sec-nav">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Menu</a></li>
-                <li><a href="#">Locations</a></li> 
-                <li><a href="#">Contact Us</a></li> 
+                <img src="static/media/logo-dark.png" class="sidebar-logo" alt="logo"/>
+                <li><a href="/">Home</a></li>
+                <li><a href="/menu">Menu</a></li>
+                <li><a href="#footer">Locations</a></li> 
+                <li><a href="#footer">Contact Us</a></li> 
               </ul>
             </div>
           </div>
@@ -71,8 +56,8 @@
         <div class="hero">
           <div class="custom--container">
             <div class="hero__content">
-              <div class="hero__logo-wraper">
-                <img src="public/images/logo.png" class="hero__logo" alt="logo"/>
+              <div class="hero__heading">
+                <div>THE CAFFEE</div>
               </div>
               <p class="hero__para para-spacer">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
@@ -87,26 +72,30 @@
       <!-- our products -->
       <section>
         <div class="ourProducts section-spacer">
-          <div class="custom--container">
+          <div class="">
+            <!-- top  -->
             <div class="ourProducts__top">
-              <div class="ourProducts__top-info">
-                <h1 class="ourProducts__top-info-heading section-main-heading">
-                  best products from all around the world
-                </h1>
-                <p class="ourProducts__top-info-para para-spacer">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-                  sed do eiusmod tempor incididunt ut labore et dolore magnaLorem 
-                  ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                </p>
-                <button class="btn">Our Menu</button>
+              <div class="custom--container">
+                <div class="ourProducts__top-info">
+                  <h1 class="ourProducts__top-info-heading section-main-heading">
+                    best products from all around the world
+                  </h1>
+                  <p class="ourProducts__top-info-para para-spacer">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                    sed do eiusmod tempor incididunt ut labore et dolore magnaLorem 
+                    ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                  </p>
+                  <button class="btn">Our Menu</button>
+                </div>
               </div>
               <div class="ourProducts__top-ref-img-wraper">
                 <div class="ourProducts__top-ref-img">
-                  <img src="public/images/ourProducts-ref-img.png" alt="ref image"/>
+                  <img src="static/media/ourProducts-ref-img.png" alt="ref image"/>
                 </div>                
               </div>
             </div>
-            <div class="ourProducts__bottom">
+            <!-- bottom  -->
+            <div class="ourProducts__bottom custom--container">
               <div class="ourProducts__bottom-top">
                 <h1 class="section-main-heading ourProducts__bottom-top-heading">our products</h1>
                 <p class="ourProducts__bottom-top-para para-spacer">
@@ -119,21 +108,21 @@
                   <div class="swiper-container">
                     <div class="swiper-wrapper">
                       <div class="swiper-slide item">
-                        <img src="public/images/ourProducts-bevarages.png" alt="item img"/>
+                        <img src="static/media/ourProducts-bevarages.png" alt="item img"/>
                       </div>
                       <div class="swiper-slide item">
-                        <img src="public/images/ourProducts-pastries.png" alt="item img"/>
+                        <img src="static/media/ourProducts-pastries.png" alt="item img"/>
                       </div>
                       <div class="swiper-slide item">
-                        <img src="public/images/ourProducts-coffee.png" alt="item img"/>
+                        <img src="static/media/ourProducts-coffee.png" alt="item img"/>
                       </div>
                       <div class="swiper-slide item">
-                        <img src="public/images/ourProducts-pastries.png" alt="item img"/>
+                        <img src="static/media/ourProducts-pastries.png" alt="item img"/>
                       </div>
                     </div>
                   </div>
                   <div class="carousel-btns">
-                    <div class="carousel-btn" id="ourProducts-prev">
+                    <div class="carousel-btn prevBtn" id="ourProducts-prev">
                       <svg xmlns="http://www.w3.org/2000/svg" width="69.119" height="69.119" viewBox="0 0 69.119 69.119">
                         <g id="Group_1040" data-name="Group 1040" transform="translate(2974.001 -2545.999)">
                           <circle id="Ellipse_3" data-name="Ellipse 3" cx="34.56" cy="34.56" r="34.56" transform="translate(-2974.001 2545.999)" fill="#1b5d40"/>
@@ -162,16 +151,16 @@
         <div class="aboutUs section-spacer">
           
           <div class="paper-effect-top-wraper">
-            <img src="public/images/paper-effect.svg" class="paper-effect"/>            
+            <img src="static/media/paper-effect.svg" class="paper-effect"/>            
           </div>
           <div class="paper-effect-bottom-wraper">
-            <img src="public/images/paper-effect-bottom.svg" class="paper-effect"/>            
+            <img src="static/media/paper-effect-bottom.svg" class="paper-effect"/>            
           </div>
 
           <div class="custom--container">
             <div class="aboutUs__row aboutUs__row-left" id="aboutUs__row1">
               <div class="aboutUs__row-img">
-                <img src="public/images/aboutUs-row1.png" alt ="about us img"/>
+                <img src="static/media/aboutUs-row1.png" alt ="about us img"/>
               </div>
               <div class="aboutUs__row-texts">
                 <h2 class="aboutUs__row-texts-heading">
@@ -189,7 +178,7 @@
 
             <div class="aboutUs__row aboutUs__row-center" id="aboutUs__row2">
               <div class="aboutUs__row-img">
-                <img src="public/images/aboutUs-row2.png" alt ="about us img"/>
+                <img src="static/media/aboutUs-row2.png" alt ="about us img"/>
               </div>
               <div class="aboutUs__row-texts">
                 <h2 class="aboutUs__row-texts-heading">
@@ -207,7 +196,7 @@
 
             <div class="aboutUs__row aboutUs__row-right" id="aboutUs__row3">
               <div class="aboutUs__row-img">
-                <img src="public/images/aboutUs-row3.png" alt ="about us img"/>
+                <img src="static/media/aboutUs-row3.png" alt ="about us img"/>
               </div>
               <div class="aboutUs__row-texts">
                 <h2 class="aboutUs__row-texts-heading">Making A <span class="aboutUs-highlight">Difference</span></h2>
@@ -307,12 +296,12 @@
         </div>
       </section>
       <section>
-        <div class="footer">
+        <div class="footer" id="footer">
           <div class="section-spacer footer__content">
 
             <div class="footer_left">
               <div class="footer__logo">
-                <img src="public/images/logo.png" alt="logo"/>
+                <img src="static/media/logo.png" alt="logo"/>
               </div>
             </div>
 
@@ -349,9 +338,9 @@
                 <li><a href="#">Menu</a></li>
               </ul>
               <div class="footer__social-media-logos">
-                <a href="#"><img src="public/images/facebook-logo.png"/></a>
-                <a href="#"><img src="public/images/instagram-logo.png"/></a>
-                <a href="#"><img src="public/images/twitter-logo.png"/></a>
+                <a href="#"><img src="static/media/facebook-logo.png"/></a>
+                <a href="#"><img src="static/media/instagram-logo.png"/></a>
+                <a href="#"><img src="static/media/twitter-logo.png"/></a>
               </div>
             </div>
             <div class="footer__copyright footer__group">2021,All Rights Reserved</div>
@@ -363,8 +352,8 @@
     <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-    <script src="public/js/slider.js"></script>
-    <script src="public/js/script.js"></script>
-    <script src="public/js/newsletterForm.js"></script>
+    <script src="static/js/slider.js"></script>
+    <script src="static/js/script.js"></script>
+    <script src="static/js/newsletterForm.js"></script>
   </body>
 </html>

@@ -1,6 +1,8 @@
 @use "pageStyles" as *;
 @import "basekick";
 .ourProducts {
+  width: 100%;
+  max-width: 100%;
   position: relative;
   background-image: url("../images/background-texture.png");
   z-index: 1;
@@ -24,9 +26,9 @@
         grid-area: bottom;
       }
     }
-    .ourProducts__top-ref-img-wraper {
-      margin: 0 $removeContainer;
-    }
+    // .ourProducts__top-ref-img-wraper {
+    //   margin: 0 $removeContainer;
+    // }
   }
   .ourProducts__bottom {
     position: relative;
@@ -86,7 +88,7 @@
     }
   }
 }
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 1220px) {
   .ourProducts {
     .ourProducts__top {
       grid-template-columns: 1fr 550px;
@@ -94,7 +96,7 @@
       grid-template-areas: "top-info top-img";
       justify-items: center;
       position: relative;
-      margin-right: $removeContainer;
+      // margin-right: $removeContainer;
       .ourProducts__top-ref-img-wraper {
         grid-area: top-img;
         .ourProducts__top-ref-img {
@@ -111,7 +113,6 @@
         text-align: left;
         padding-right: 4rem;
         grid-area: top-info;
-        max-width: 600px;
         .ourProducts__top-info-heading {
           width: 100%;
           max-width: 730px;
@@ -141,7 +142,6 @@
 @media screen and (min-width: 1392px) {
   .ourProducts {
     .ourProducts__top {
-      margin-right: $removeContainer;
       .ourProducts__top-ref-img {
         right: 0px;
         width: 550px;
@@ -150,7 +150,6 @@
         top: 0;
       }
       .ourProducts__top-info {
-        max-width: 800px;
         .ourProducts__top-info-para {
           width: 80%;
         }

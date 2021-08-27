@@ -1,0 +1,128 @@
+[
+  {
+    "item_id": 1,
+    "item_name": "caramel cappuccino",
+    "main_cate_type": "coffee",
+    "secondary_cate_type": "cappuccino",
+    "description": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor",
+    "item_status":[
+      {
+        "status":"discount",
+        "new_price": 3.54
+      }
+    ],
+    "item_Price": 6.59,
+    "img": "https://dl.dropboxusercontent.com/s/go11g5wjym7iyta/cappuccino.png?dl=0"
+  },
+  {
+    "item_id": 2,
+    "item_name": "chocolate latte",
+    "main_cate_type": "coffee",
+    "secondary_cate_type": "latte",
+    "description": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor",
+    "item_Price": 2.99,
+    "img": "https://dl.dropboxusercontent.com/s/0zh9vh6f0iaasby/chocolate%20latte.png?dl=0"
+  },
+  {
+    "item_id": 3,
+    "item_name": "black coffee",
+    "main_cate_type": "coffee",
+    "secondary_cate_type": "hot coffee",
+    "description": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor",
+    "item_Price": 5,
+    "img": "https://dl.dropboxusercontent.com/s/111wtptvztqofvg/black%20coffee.png?dl=0"
+  },
+  {
+    "item_id": 4,
+    "item_name": "tuna sandwich",
+    "main_cate_type": "food",
+    "secondary_cate_type": "sandwiches",
+    "description": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor",
+    "item_Price": 15.30,
+    "_id": "JTDl2S5lG9xzovLu",
+    "img": "https://dl.dropboxusercontent.com/s/go11g5wjym7iyta/cappuccino.png?dl=0"
+  },
+  {
+    "item_id": 5,
+    "item_name": "chocolate pastries",
+    "main_cate_type": "food",
+    "secondary_cate_type": "pastries",
+    "item_Price": 3.99,
+    "description": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor",
+    "_id": "fehsPCzatnLfrHIg",
+    "img": "https://dl.dropboxusercontent.com/s/0zh9vh6f0iaasby/chocolate%20latte.png?dl=0"
+  },
+  {
+    "item_id": 6,
+    "item_name": "barazilian rosted coffee beans",
+    "main_cate_type": "coffee beans",
+    "secondary_cate_type": "rosted",
+    "item_Price": 9.88,
+    "description": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor",
+    "_id": "ecEAYs1DqUt8ZG2n",
+    "img": "https://dl.dropboxusercontent.com/s/111wtptvztqofvg/black%20coffee.png?dl=0"
+  },
+  {
+    "item_id": 1,
+    "item_name": "caramel cappuccino",
+    "main_cate_type": "coffee",
+    "secondary_cate_type": "cappuccino",
+    "description": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor",
+    "item_status":[
+      {
+        "status":"discount",
+        "new_price": 3.54
+      }
+    ],
+    "item_Price": 6.59,
+    "img": "https://dl.dropboxusercontent.com/s/go11g5wjym7iyta/cappuccino.png?dl=0"
+  },
+  {
+    "item_id": 2,
+    "item_name": "chocolate latte",
+    "main_cate_type": "coffee",
+    "secondary_cate_type": "latte",
+    "description": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor",
+    "item_Price": 2.99,
+    "img": "https://dl.dropboxusercontent.com/s/0zh9vh6f0iaasby/chocolate%20latte.png?dl=0"
+  },
+  {
+    "item_id": 3,
+    "item_name": "black coffee",
+    "main_cate_type": "coffee",
+    "secondary_cate_type": "hot coffee",
+    "description": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor",
+    "item_Price": 5,
+    "img": "https://dl.dropboxusercontent.com/s/111wtptvztqofvg/black%20coffee.png?dl=0"
+  },
+  {
+    "item_id": 4,
+    "item_name": "tuna sandwich",
+    "main_cate_type": "food",
+    "secondary_cate_type": "sandwiches",
+    "description": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor",
+    "item_Price": 15.30,
+    "_id": "JTDl2S5lG9xzovLu",
+    "img": "https://dl.dropboxusercontent.com/s/go11g5wjym7iyta/cappuccino.png?dl=0"
+  },
+  {
+    "item_id": 5,
+    "item_name": "chocolate pastries",
+    "main_cate_type": "food",
+    "secondary_cate_type": "pastries",
+    "item_Price": 3.99,
+    "description": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor",
+    "_id": "fehsPCzatnLfrHIg",
+    "img": "https://dl.dropboxusercontent.com/s/0zh9vh6f0iaasby/chocolate%20latte.png?dl=0"
+  },
+  {
+    "item_id": 6,
+    "item_name": "barazilian rosted coffee beans",
+    "main_cate_type": "coffee beans",
+    "secondary_cate_type": "rosted",
+    "item_Price": 9.88,
+    "description": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor",
+    "_id": "ecEAYs1DqUt8ZG2n",
+    "img": "https://dl.dropboxusercontent.com/s/111wtptvztqofvg/black%20coffee.png?dl=0"
+  }
+]
