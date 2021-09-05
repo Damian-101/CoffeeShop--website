@@ -1,0 +1,17 @@
+{
+    "scripts": {
+        "runApp": "concurrently \"nodemon api/itemsApi.js\" \"nodemon server.mjs\" "
+    },
+    "name": "coffee-shop-site",
+    "version": "0.1.0",
+    "engines": {
+        "node": "14.15.4",
+        "type": "commonjs"
+    },
+    "devDependencies": {
+        "concurrently": "^6.2.1"
+    },
+    "dependencies": {
+        "parallelshell": "^3.0.2"
+    }
+}

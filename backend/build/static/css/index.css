@@ -4,6 +4,10 @@ html {
   cursor: context-menu;
 }
 
+body{
+  overflow-x: hidden;
+}
+
 button {
   outline: none;
   cursor: pointer;
@@ -24,6 +28,8 @@ button {
 .responsive {
   display: block;
 }
+
+
 
 @media screen and (min-width: 1000px) {
   .responsive {
